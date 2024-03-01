@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="../Assets/Icon/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../Assets/Css/main.css">
+    <link rel="stylesheet" href="../Assets/Css/reponsive.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__left">
+            <img src="../Assets/Image/Logo/logo.png" alt="">
+        </div>
+        <div class="header__center">
+            <div class="header__center__home ">
+                <a href="../Html/index.html">Trang chủ</a>
+            </div>
+            <div class="header__center__movie">
+                <a href="../Html/movies.html">Phim</a>
+            </div>
+            <div class="header__center__event">
+                <a href="../Html/event.html">Sự Kiện</a>
+            </div>
+            <div class="header__center__cinema--price title__header__index">
+                <a href="">Rạp & Giá Vé</a>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__right__search">
+                <div class="header__right__search--input">
+                    <input type="text">
+                </div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__right__user">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="header__right__control--light">
+                <label id="theme-toggle-button">
+                    <input type="checkbox" id="toggle">
+                    <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(3.5 3.5)" data-name="Component 15 – 1" id="Component_15_1">
+
+
+                            <g filter="url(#container)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+                                <rect fill="#83cbd8" transform="translate(3.5 3.5)" rx="17.5" height="35" width="60.667"
+                                    data-name="container" id="container"></rect>
+                            </g>
+
+                            <g transform="translate(2.333 2.333)" id="button">
+
+                                <g data-name="sun" id="sun">
+                                    <g filter="url(#sun-outer)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                                        <circle fill="#f8e664" transform="translate(5.83 5.83)" r="15.167" cy="15.167"
+                                            cx="15.167" data-name="sun-outer" id="sun-outer-2"></circle>
+                                    </g>
+                                    <g filter="url(#sun)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                                        <path fill="rgba(246,254,247,0.29)" transform="translate(9.33 9.33)"
+                                            d="M11.667,0A11.667,11.667,0,1,1,0,11.667,11.667,11.667,0,0,1,11.667,0Z"
+                                            data-name="sun" id="sun-3"></path>
+                                    </g>
+                                    <circle fill="#fcf4b9" transform="translate(8.167 8.167)" r="7" cy="7" cx="7"
+                                        id="sun-inner"></circle>
+                                </g>
+
+
+                                <g data-name="moon" id="moon">
+                                    <g filter="url(#moon)" transform="matrix(1, 0, 0, 1, -31.5, -5.83)">
+                                        <circle fill="#cce6ee" transform="translate(31.5 5.83)" r="15.167" cy="15.167"
+                                            cx="15.167" data-name="moon" id="moon-3"></circle>
+                                    </g>
+                                    <g fill="#a6cad0" transform="translate(-24.415 -1.009)" id="patches">
+                                        <circle transform="translate(43.009 4.496)" r="2" cy="2" cx="2"></circle>
+                                        <circle transform="translate(39.366 17.952)" r="2" cy="2" cx="2"
+                                            data-name="patch"></circle>
+                                        <circle transform="translate(33.016 8.044)" r="1" cy="1" cx="1"
+                                            data-name="patch"></circle>
+                                        <circle transform="translate(51.081 18.888)" r="1" cy="1" cx="1"
+                                            data-name="patch"></circle>
+                                        <circle transform="translate(33.016 22.503)" r="1" cy="1" cx="1"
+                                            data-name="patch"></circle>
+                                        <circle transform="translate(50.081 10.53)" r="1.5" cy="1.5" cx="1.5"
+                                            data-name="patch"></circle>
+                                    </g>
+                                </g>
+                            </g>
+
+
+                            <g filter="url(#cloud)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+                                <path fill="#fff" transform="translate(-3466.47 -160.94)"
+                                    d="M3512.81,173.815a4.463,4.463,0,0,1,2.243.62.95.95,0,0,1,.72-1.281,4.852,4.852,0,0,1,2.623.519c.034.02-.5-1.968.281-2.716a2.117,2.117,0,0,1,2.829-.274,1.821,1.821,0,0,1,.854,1.858c.063.037,2.594-.049,3.285,1.273s-.865,2.544-.807,2.626a12.192,12.192,0,0,1,2.278.892c.553.448,1.106,1.992-1.62,2.927a7.742,7.742,0,0,1-3.762-.3c-1.28-.49-1.181-2.65-1.137-2.624s-1.417,2.2-2.623,2.2a4.172,4.172,0,0,1-2.394-1.206,3.825,3.825,0,0,1-2.771.774c-3.429-.46-2.333-3.267-2.2-3.55A3.721,3.721,0,0,1,3512.81,173.815Z"
+                                    data-name="cloud" id="cloud"></path>
+                            </g>
+
+
+                            <g fill="#def8ff" transform="translate(3.585 1.325)" id="stars">
+                                <path transform="matrix(-1, 0.017, -0.017, -1, 24.231, 3.055)"
+                                    d="M.774,0,.566.559,0,.539.458.933.25,1.492l.485-.361.458.394L1.024.953,1.509.592.943.572Z">
+                                </path>
+                                <path transform="matrix(-0.777, 0.629, -0.629, -0.777, 23.185, 12.358)"
+                                    d="M1.341.529.836.472.736,0,.505.46,0,.4.4.729l-.231.46L.605.932l.4.326L.9.786Z"
+                                    data-name="star"></path>
+                                <path transform="matrix(0.438, 0.899, -0.899, 0.438, 23.177, 29.735)"
+                                    d="M.015,1.065.475.9l.285.365L.766.772l.46-.164L.745.494.751,0,.481.407,0,.293.285.658Z"
+                                    data-name="star"></path>
+                                <path transform="translate(12.677 0.388) rotate(104)"
+                                    d="M1.161,1.6,1.059,1,1.574.722.962.607.86,0,.613.572,0,.457.446.881.2,1.454l.516-.274Z"
+                                    data-name="star"></path>
+                                <path transform="matrix(-0.07, 0.998, -0.998, -0.07, 11.066, 15.457)"
+                                    d="M.873,1.648l.114-.62L1.579.945,1.03.62,1.144,0,.706.464.157.139.438.7,0,1.167l.592-.083Z"
+                                    data-name="star"></path>
+                                <path transform="translate(8.326 28.061) rotate(11)"
+                                    d="M.593,0,.638.724,0,.982l.7.211.045.724.36-.64.7.211L1.342.935,1.7.294,1.063.552Z"
+                                    data-name="star"></path>
+                                <path transform="translate(5.012 5.962) rotate(172)"
+                                    d="M.816,0,.5.455,0,.311.323.767l-.312.455.516-.215.323.456L.827.911,1.343.7.839.552Z"
+                                    data-name="star"></path>
+                                <path transform="translate(2.218 14.616) rotate(169)"
+                                    d="M1.261,0,.774.571.114.3.487.967,0,1.538.728,1.32l.372.662.047-.749.728-.218L1.215.749Z"
+                                    data-name="star"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </label>
+            </div>
+            <div class="header__menu--mobile">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+        <div class="header__center__mobile--close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="slider">
+        <div class="slider__img--item">
+            <img src="../Assets/Image/Cinema/Hồ Chí Minh/Nguyễn Du/1.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Assets/Image/Cinema/Hồ Chí Minh/Nguyễn Du/2.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Assets/Image/Cinema/Hồ Chí Minh/Nguyễn Du/3.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Assets/Image/Cinema/Hồ Chí Minh/Nguyễn Du/4.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="cinema" class="padding__screen margin__top">
+        <div class="cinema__box1">
+            <div class="cinema__box1--name">
+                Movies Nguyễn Du
+            </div>
+            <div class="cinema__box1--address">
+                <div>
+                    <p>Địa chỉ :</p>
+                    <p>116 Nguyễn Du, Quận 1, Tp.HCM</p>
+                </div>
+                <div>
+                    <p>Holine :</p>
+                    <p>1900 6789</p>
+                </div>
+            </div>
+        </div>
+        <div class="cinema__box2">
+            <div class="cinema__box2__city">
+                <select name="" id="cityMovies">
+                    <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                    <option value="TP Hà Nội">TP Hà Nội</option>
+                </select>
+            </div>
+            <div class="cinema__box2__name--cinema">
+                <select name="" id="cinemaMoviesSelect">
+                    <option value="Movies Nguyễn Du">Movies Nguyễn Du</option>
+                    <option value="Movies Sala">Movies Sala</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="title__main" class="padding__screen margin__top">
+        <div class="title__main__name ">Phim</div>
+    </div>
+
+    <div id="movie--day" class="padding__screen margin__top">
+        <div class="movie--day__detail">
+            <div class="movie--day__detail--current">
+                <p>Hôm Nay</p>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="movie--day__list"></div>
+    </div>
+
+    <div class="border--bottom"></div>
+
+    <div id="container--price--address" class="padding__screen margin__top">
+        <div class="container--price">
+            <div id="title__main">
+                <div class="title__main__name ">Giá Vé</div>
+            </div>
+            <div class="container--price__img">
+                <img src="../Assets/Image/Price/Giá Vé.jpg" alt="">
+            </div>
+        </div>
+        <div class="container--address">
+            <div id="title__main">
+                <div class="title__main__name ">Thông Tin Chi Tiết</div>
+            </div>
+            <div class="container--address__detail">
+                <div>
+                    <p>Địa Chỉ :</p>
+                    <p>116 Nguyễn Du, Quận 1, Tp.HCM</p>
+                </div>
+                <div>
+                    <p>Số điện thoại :</p>
+                    <p>1900 6789</p>
+                </div>
+            </div>
+            <div class="container--address__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4953597108693!2d106.69068947427158!3d10.773321159252554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3bff2ee11b%3A0xdf05c76bf6a8b9fb!2zMTE2IMSQLiBOZ3V54buFbiBEdSwgUGjGsOG7nW5nIELhur9uIFRow6BuaCwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1709020347083!5m2!1svi!2s"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="container--address__info">
+                <p>Là rạp chiếu đầu tiên và đông khách nhất trong hệ thống, <span>Movies Nguyễn Du</span> chính thức đi vào hoạt động từ ngày 20/5/2005 và được xem là một trong những cụm rạp mang tiêu chuẩn quốc tế hiện đại bậc nhất đầu tiên xuất hiện tại Việt Nam. <span>Movies Nguyễn Du</span> là một trong những rạp chiếu phim tiên phong mang đến cho khán giả những trải nghiệm phim chiếu rạp tốt nhất.</p>
+            
+                <p><span>Movies Nguyễn Du</span> gồm 5 phòng chiếu với hơn 1000 chỗ ngồi, trong đó có 1 phòng chiếu phim 3D và 4 phòng chiếu phim 2D, với hơn 1000 chỗ ngồi được thiết kế tinh tế giúp khách hàng có thể xem những bộ phim hay một cách thoải mái và thuận tiện nhất. Chất lượng hình ảnh rõ nét, âm thanh Dolby 7.1 cùng màn hình chiếu kỹ thuật 3D và Digital vô cùng sắc mịn, mang đến một không gian giải trí vô cùng sống động.</p>
+                
+                <p>Bên cạnh đó, với lợi thế gần khu vực sầm uất bậc nhất ở trung tâm thành phố, bãi để xe rộng rãi, có tiệm cafe ngoài trời – đây là nơi cực thu hút bạn trẻ đến xem phim và check-in.</p>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer__detail padding__screen margin__top">
+            <div class="footer__detail__introduce">
+                <h3>Giới thiệu</h3>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Thỏa thuận sử dụng</li>
+                    <li>Quy chế hoạt động</li>
+                    <li>Chính sách bảo mật</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__film--angle">
+                <h3>Góc điện ảnh</h3>
+                <ul>
+                    <li>Thể loại phim</li>
+                    <li>Bình luận phim</li>
+                    <li>Blog điện ảnh</li>
+                    <li>Phim hay thắng</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__support">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li>Góp ý</li>
+                    <li>Sale & Services</li>
+                    <li>Rạp & Giá vé</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__logo">
+                <div class="footer__detail__logo--main">
+                    <img src="../Assets/Image/Logo/logo.png" alt="">
+                </div>
+                <div class="footer__detail__logo--tooltip">
+                    <div class="footer__tooltip facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="tooltip__name">Facebook</span>
+                    </div>
+                    <div class="footer__tooltip github">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="tooltip__name">Github</span>
+                    </div>
+                    <div class="footer__tooltip instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="tooltip__name">Instagram</span>
+                    </div>
+                    <div class="footer__tooltip youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="tooltip__name">Youtube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__adress padding__screen">
+            <h2>CÔNG TY CỔ PHẦN PHIM MOVIES</h2>
+            <p>Toà nhà Bitexco Nam Long, 63A Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+            <p>
+                <i class="fa-solid fa-mobile"></i> : <span>0353707544</span> -
+                <i class="fa-solid fa-phone"></i> : <span>1900 6789</span> -
+                <i class="fa-solid fa-envelope"></i> : <span>daongocanh25042004@gmail.com</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../Js/data.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../Js/index.js"></script>
+    <script src="../Js/mobile.js"></script>
+</body>
+
+</html>
