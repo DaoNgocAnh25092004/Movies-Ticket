@@ -1,4 +1,5 @@
 // ------------------------------Sự kiện ở thanh header
+var currentUrlHtml = window.location.href;
 
 //Sự kiện bấm nút thanh tìm kiếm
 const iconSearchHeader = document.querySelector('.header__right__search i');
@@ -12,7 +13,11 @@ iconSearchHeader.addEventListener('click', () => {
 const iconUserHeader = document.querySelector('.header__right__user i');
 
 iconUserHeader.addEventListener('click', () => {
-    window.location.href = 'login.html';
+    if (currentUrlHtml.endsWith('index.html')) {
+        window.location.href = '/Html/login.html';
+    } else {
+        window.location.href = 'login.html';
+    }
 })
 
 //sự kiện nút đổi màu
@@ -69,7 +74,7 @@ function sliderHeader() {
 }
 
 
-var currentUrlHtml = window.location.href;
+
 
 //---------------------------Sử lý sự kiện khi ở trang index
 if (currentUrlHtml.endsWith('index.html')) {
