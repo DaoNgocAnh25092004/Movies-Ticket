@@ -354,6 +354,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
     const addressCinemaDetails = document.querySelector('.cinema__box1--address div:first-child p:last-child');
     const addressCinemaDetails2 = document.querySelector('.container--address__detail div:first-child p:last-child');
     const map = document.querySelector('.container--address__map');
+    const titlleCinemaName = document.querySelector('.cinema__box1--name')
 
     // Xử lý lấy ngày
     let daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
@@ -512,6 +513,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
                 if (item.nameCinema === "Movies Nguyễn Du") {
                     addressCinemaDetails.innerHTML = item.address;
                     addressCinemaDetails2.innerHTML = item.address;
+                    titlleCinemaName.innerHTML = item.nameCinema;
                     map.innerHTML = item.map;
                 }
             });
@@ -534,6 +536,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
                 if (item.nameCinema === "Movies Sala") {
                     addressCinemaDetails.innerHTML = item.address;
                     addressCinemaDetails2.innerHTML = item.address;
+                    titlleCinemaName.innerHTML = item.nameCinema;
                     map.innerHTML = item.map;
                 }
             });

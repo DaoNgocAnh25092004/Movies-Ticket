@@ -72,7 +72,7 @@
     }
 
     .header__center div {
-        width: 100%;
+        display: inline-block;
         margin: 3rem 0 0 10rem;
     }
 
@@ -229,4 +229,33 @@
     .box__promotion__List__item--img {
         height: 23.5rem;
     }
+
+    /* Trang cinema và price */
+    #cinema, 
+    #container--price--address{
+        flex-direction: column;
+    }
+
+    .cinema__box2 {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .cinema__box2 select {
+        width: 17rem;
+    }
+
+    .movie--day__detail  {
+       gap: 2rem;
+    }
+
+    .movie--day__list {
+        --spacing: 2.5rem;
+        --columns: 2;
+    }
+
+    #container--price--address div {
+        width: 100%;
+    }
+    
 }
