@@ -40,7 +40,7 @@
             <img src="../Assets/Image/Logo/logo.png" alt="">
         </div>
         <div class="header__center">
-            <div class="header__center__home ">
+            <div class="header__center__home">
                 <a href="../Html/index.html">Trang chủ</a>
             </div>
             <div class="header__center__movie">
@@ -80,44 +80,71 @@
         <div class="overlay"></div>
     </header>
 
-    <div id="login">
-        <form action="" id="form__login">
-            <h1>Đăng Nhập</h1>
-
-            <div class="form__login__group">
-                <input type="text" placeholder="Email">
-                <div class="form__login__group--message"></div>
+    <div id="watch__trailer">
+        <div class="watch__trailer__box1"></div>
+        <div class="watch__trailer__img">
+            <img src="../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Mật Vụ Ong.jpg" alt="">
+        </div>
+        <div class="watch__trailer__box2"></div>
+        <div class="watch__trailer__overlay">
+            <div class="watch__trailer__overlay--icon">
+                <i class="fa-regular fa-circle-play"></i>
             </div>
-            <div class="form__login__group">
-                <input type="text" placeholder="Mật khẩu">
-                <div class="form__login__group--message"></div>
+        </div>
+    </div>
+
+    <div id="info--movie" class="padding__screen margin__top">
+        <div id="info--movie__detail">
+            <div class="info--movie__detail__describe">
+                <div class="info--movie__detail__describe--img">
+                    <img src="../Assets/Image/Poster/Vertical/Movie_Is_Showing/Mật Vụ Ong.webp" alt="">
+                </div>
+                <div class="info--movie__detail__describe__info">
+                    <div>Kung Fu Panda 4</div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-clock"></i>
+                            <p>94 Phút</p>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>08/03/2024</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <p>9.1</p>
+                        <p>(321 votes)</p>
+                    </div>
+                    <div>
+                        <p>Quốc gia:</p>
+                        <p>Trung quốc</p>
+                    </div>
+                    <div>
+                        <p>Nhà sản xuất:</p>
+                        <p>DreamWorks Animation, Universal Pictures</p>
+                    </div>
+                    <div>
+                        <p>Thể loại</p>
+                        <div>Hoạt Hình</div>
+                        <div>Hành động</div>
+                        <div>Phiêu lưu</div>
+                    </div>
+                    <div>
+                        <p>Đạo diễn:</p>
+                        <div>Mike Mitchell</div>
+                        <div>Stephanie Stine</div>
+                    </div>
+                    <div>
+                        <p>Diễn viên:</p>
+                        <div>Jack Black</div>
+                        <div>Dustin Hoffman</div>
+                        <div>Awkwafina</div>
+                    </div>
+                </div>
             </div>
-
-            <button>Đăng nhập</button>
-
-            <div class="form__login__support">
-                <div class="form__login__support--memorize">
-                    <input type="checkbox" id="checkbox__login">
-                    <label for="checkbox__login">Ghi nhớ tôi</label>
-                </div>
-                <div class="form__login__support--help">
-                    <p>Bạn cần trợ giúp?</p>
-                </div>
-            </div>
-
-            <div class="form__login__info">
-                <div class="form__login__info--register">
-                    <p>Bạn mới tham gia Movies?</p>
-                    <p>Đăng ký ngay</p>
-                </div>
-                <div class="form__login__info--details">
-                    <p>Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot. <span>Tìm hiểu
-                            thêm.</span></p>
-                </div>
-            </div>
-
-        </form>
-        <div class="overlay__login"></div>
+        </div>
+        <div id="info--movie__film--hot"></div>
     </div>
 
     <footer id="footer">
@@ -186,7 +213,6 @@
             </p>
         </div>
     </footer>
-
     <script src="../Js/index.js"></script>
     <script src="../Js/mobile.js"></script>
 </body>

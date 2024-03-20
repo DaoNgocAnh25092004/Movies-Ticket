@@ -19,6 +19,30 @@
     .comment__right__box3--img img:hover {
         transform: scale(1.1);
     }
+
+    /* Hiệu ứng scroll */
+    .left-to-right {
+        transform: translateX(-200%);
+        transition: 1s linear;
+    }
+    .left-to-right.start {
+        transform: translateX(0);
+    }
+    .right-to-left {
+        transform: translateX(1500px);
+        transition: 1s linear;
+    }
+    .right-to-left.start {
+        transform: translateX(0);
+    }
+    .zoom {
+        transform: scale(0);
+        transition: 0.5s linear;
+    }
+    .zoom.start {
+        transform: scale(1);
+    }
+    
 }
 
 @media only screen and (max-width: 740px) {
@@ -46,12 +70,12 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        background-color: var(--white-color);
+        background-color: var(--bluePurple-color);
         margin-top: 40rem;
         right: 0;
         width: 30rem;
         padding: 50rem 0;
-        color: var(--black-color);
+        color: var(--white-color);
         display: none;
         z-index: 3;
         animation: anmtMenu 1s ease;
@@ -257,5 +281,10 @@
     #container--price--address div {
         width: 100%;
     }
-    
+    .cinema__box1--address div p:first-child {
+        width: 6rem;
+    }
+    .cinema__box1--address div p:last-child {
+        width: 32rem;
+    }
 }

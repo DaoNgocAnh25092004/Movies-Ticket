@@ -12,11 +12,17 @@ iconSearchHeader.addEventListener('click', () => {
 const iconUserHeader = document.querySelector('.header__right__user i');
 
 iconUserHeader.addEventListener('click', () => {
-    window.location.href = 'login.html';
+    const animationNextPage = document.getElementById('next--page');
+
+        animationNextPage.style.display = 'block';
+        setTimeout(() => {
+        animationNextPage.style.display = 'none';
+        window.location.href = 'login.html'; 
+        }, 1000);
 })
 
 //sự kiện nút đổi màu
-const btnChangeColorWeb = document.getElementById("theme-toggle-button")
+const btnChangeColorWeb = document.getElementById("wrapper-btn")
 
 btnChangeColorWeb.addEventListener('change', function () {
     document.body.classList.toggle('body--color__change');
@@ -68,6 +74,104 @@ function sliderHeader() {
     });
 }
 
+//Sự kiện close trailer 
+const trailerContainer = document.getElementById('trailer');
+const iframeContainer = document.querySelector('#trailer div')
+
+function showTrailer() {
+    const movieList = document.querySelectorAll('#movie__list div');
+
+    movieList.forEach((movie) => {
+        const btnTrailer = movie.querySelector('.movie__item--img__detail--container div:last-child')
+
+        if (movie.id.charAt(0) === 'B') {
+            movieIsShowing.forEach((item) => {
+                if (movie.id === item.id) {
+                    btnTrailer.addEventListener('click', () => {
+                        trailerContainer.style.display = 'block';
+                        iframeContainer.innerHTML = item.trailer;
+                    })
+                }
+            })
+        }
+
+        if (movie.id.charAt(0) === 'A') {
+            movieComingSoon.forEach((item) => {
+                if (movie.id === item.id) {
+                    btnTrailer.addEventListener('click', () => {
+                        trailerContainer.style.display = 'block';
+                        iframeContainer.innerHTML = item.trailer;
+                    })
+                }
+            })
+        }
+
+    })
+
+
+}
+
+
+
+function closeTrailer() {
+    trailerContainer.addEventListener('click', () => {
+        iframeContainer.classList.add('animation-trailer');
+        setTimeout(() => {
+            iframeContainer.innerHTML = '';
+            trailerContainer.style.display = 'none';
+            iframeContainer.classList.remove('animation-trailer');
+        }, 600);
+    });
+}
+
+//Hiệu ứng khi scroll trang
+function animationScroll() {
+    var animationElements = document.querySelectorAll('.show-on-scroll');
+
+    function toggleAnimationElementInWindow(element) {
+        var rect = element.getClientRects()[0];
+        var heightScreen = window.innerHeight;
+
+        if (!(rect.bottom < 0 || rect.top > heightScreen)) {
+            element.classList.add('start')
+        } else {
+            element.classList.remove('start')
+        }
+    }
+
+    function checkAnimation() {
+        animationElements.forEach((element) => {
+            toggleAnimationElementInWindow(element);
+        })
+    }
+
+    window.onscroll = checkAnimation
+}
+
+animationScroll();
+
+//Sự kiện khi chuyển trang
+function nextPage() {
+    const cardsA = document.querySelectorAll('.header__center a');
+    const animationNextPage = document.getElementById('next--page');
+
+    cardsA.forEach((card) => {
+        card.addEventListener('click', () => {
+            event.preventDefault();
+
+            var hrefValue = card.getAttribute('href');
+            animationNextPage.style.display = 'block';
+
+            setTimeout(() => {
+            animationNextPage.style.display = 'none';
+            window.location.href = hrefValue;    
+            }, 1000);
+
+        })
+    })
+}
+
+nextPage();
 
 var currentUrlHtml = window.location.href;
 
@@ -108,7 +212,7 @@ if (currentUrlHtml.endsWith('index.html')) {
         let countMovieComingSoon = movieComingSoon.slice(0, limit);
 
         countMovieComingSoon.forEach(item => {
-            movieList.innerHTML += `<div class="movie__item">
+            movieList.innerHTML += `<div class="movie__item zoom show-on-scroll" id="${item.id}">
                                 <div class="movie__item--img">
                                     <div class="movie__item--img__detail">
                                         <div class="movie__item--img__detail--container">
@@ -132,6 +236,15 @@ if (currentUrlHtml.endsWith('index.html')) {
         });
         //Gọi lại hàm click trái tim
         clickHeart();
+
+        //Gọi hàm open trailer
+        showTrailer();
+
+        //Gọi lại hàm close trailer
+        closeTrailer();
+
+        //Gọi lại hàm animationScroll trang
+        animationScroll();
     })
 
     //click vào phim đang chiếu 
@@ -152,7 +265,7 @@ if (currentUrlHtml.endsWith('index.html')) {
         let countMovieComingSoon = movieIsShowing.slice(0, limit);
 
         countMovieComingSoon.forEach(item => {
-            movieList.innerHTML += `<div class="movie__item">
+            movieList.innerHTML += `<div class="movie__item zoom show-on-scroll" id="${item.id}">
                                 <div class="movie__item--img">
                                     <div class="movie__item--img__detail">
                                         <div class="movie__item--img__detail--container">
@@ -177,8 +290,14 @@ if (currentUrlHtml.endsWith('index.html')) {
         //Gọi lại hàm click trái tim
         clickHeart();
 
+        //Gọi hàm open trailer
+        showTrailer();
 
-        
+        //Gọi lại hàm close trailer
+        closeTrailer();
+
+        //Gọi lại hàm animationScroll trang
+        animationScroll();
     })
 
     // ---------------------------- Sự kiện click vào title main ở Góc điện ảnh
@@ -265,9 +384,28 @@ if (currentUrlHtml.endsWith('index.html')) {
             ]
         });
     });
-    
+
+    //Sự kiện khi click vào tất cả phim
+    const allMovies = document.querySelector('.title__main__detail--all');
+
+    allMovies.addEventListener('click', () => {
+        const animationNextPage = document.getElementById('next--page');
+
+        animationNextPage.style.display = 'block';
+        setTimeout(() => {
+        animationNextPage.style.display = 'none';
+        window.location.href = 'movies.html';    
+        }, 1000);
+    })
+
     //Gọi lại hàm slider 
     sliderHeader();
+
+    //Gọi hàm open trailer
+    showTrailer();
+
+    //Gọi lại hàm close trailer
+    closeTrailer();
 }
 
 //---------------------------Sử lý sự kiện khi ở trang movies
@@ -277,7 +415,7 @@ if (currentUrlHtml.endsWith('movies.html')) {
 
     if (listMovieIsShowing) {
         movieIsShowing.forEach(item => {
-            listMovieIsShowing.innerHTML += `<div class="movie__item">
+            listMovieIsShowing.innerHTML += `<div class="movie__item zoom show-on-scroll" id="${item.id}">
                                 <div class="movie__item--img">
                                     <div class="movie__item--img__detail">
                                         <div class="movie__item--img__detail--container">
@@ -298,12 +436,20 @@ if (currentUrlHtml.endsWith('movies.html')) {
                                     <i class="fa-solid fa-heart"></i>
                                 </div>
                             </div>`
-
         });
+
+        //Gọi hàm open trailer
+        showTrailer();
+
+        //Gọi lại hàm close trailer
+        closeTrailer();
+
+        //Gọi lại hàm animationScroll trang
+        animationScroll();
     }
     if (listMovieComingSoon) {
         movieComingSoon.forEach(item => {
-            listMovieComingSoon.innerHTML += `<div class="movie__item">
+            listMovieComingSoon.innerHTML += `<div class="movie__item zoom show-on-scroll" id="${item.id}">
                                 <div class="movie__item--img">
                                     <div class="movie__item--img__detail">
                                         <div class="movie__item--img__detail--container">
@@ -326,12 +472,23 @@ if (currentUrlHtml.endsWith('movies.html')) {
                             </div>`
 
         });
+
+        //Gọi hàm open trailer
+        showTrailer();
+
+        //Gọi lại hàm close trailer
+        closeTrailer();
+
+        //Gọi lại hàm animationScroll trang
+        animationScroll();
     }
 
     clickHeart();
 
     //Gọi lại hàm slider
     sliderHeader();
+
+
 }
 
 //---------------------------Sử lý sự kiện khi ở trang cinema__price
@@ -487,7 +644,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
     })
 
     //sự kiện khi chọn địa chỉ cinema
-    addressCinema.addEventListener('change',  () => {
+    addressCinema.addEventListener('change', () => {
         let selectedCinema = addressCinema.value;
 
         // silderCinemaTicket.innerHTML = '';
@@ -509,7 +666,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
             //     }
             // });
 
-           cinemaAndTicket.forEach(item => {
+            cinemaAndTicket.forEach(item => {
                 if (item.nameCinema === "Movies Nguyễn Du") {
                     addressCinemaDetails.innerHTML = item.address;
                     addressCinemaDetails2.innerHTML = item.address;
@@ -542,7 +699,7 @@ if (currentUrlHtml.endsWith('cinema__price.html')) {
             });
         }
     })
-    
+
     //Khi chọn Hồ Chí Minh
     cityCinema.addEventListener('change', () => {
         let selectedCity = cityCinema.value;
