@@ -13,7 +13,9 @@ body.body--color__change {
     --white-color: rgb(10, 2, 25);
     --black-color: #fff;
     --bluePurple-color: #fff;
-    --grey-color: #ccc;
+    --grey-color: rgb(105, 104, 104);
+    --shadow-color : #fff;
+
 }
 
 * {
@@ -38,7 +40,8 @@ body {
 #next--page {
     display: none;
 }
-#next--page > div{
+
+#next--page>div {
     position: fixed;
     top: 0;
     right: 0;
@@ -451,7 +454,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 0 10px var(--overLay-color);
+    box-shadow: 0 0 10px var(--white-color);
     background-color: var(--bluePurple-color);
     color: var(--white-color);
     position: fixed;
@@ -905,7 +908,7 @@ body {
 .title__main__name {
     font-size: 2rem;
     font-weight: 600;
-    border-left: 5px solid var(--white-color);
+    border-left: 5px solid var(--blueAqua-color);
     padding-left: 1rem;
 }
 
@@ -1478,7 +1481,7 @@ body {
 
 .box__promotion__List__item--img {
     width: 100%;
-    height: 38rem;
+    height: 20rem;
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
@@ -1520,7 +1523,7 @@ body {
 }
 
 .box__promotion__List__item:hover .list__promotion__item--detail p {
-    color: var(--bluePurple-color);
+    color: #fff;
     font-size: 1.7rem;
     position: absolute;
     top: 50%;
@@ -1533,7 +1536,7 @@ body {
 
 .box__hot--movies__list__item--img {
     width: 100%;
-    height: 100%;
+    height: 25rem;
     border-radius: 1rem;
     overflow: hidden;
     cursor: pointer;
@@ -1570,7 +1573,7 @@ body {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
-    height: 53rem;
+    height: 25rem;
 }
 
 .box__hot--movies__list__item--buy div {
@@ -1583,8 +1586,8 @@ body {
     align-items: center;
     font-size: 1.7rem;
     gap: 2rem;
-    color: var(--bluePurple-color);
-    border: 0.1rem solid var(--bluePurple-color);
+    color: #fff;
+    border: 0.1rem solid #fff;
     padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
@@ -1662,6 +1665,7 @@ body {
     width: 10rem;
     height: 8rem;
     border-radius: 1rem;
+    border: 0.1rem solid var(--blueAqua-color);
 }
 
 .movie--day__detail div:hover {
@@ -1992,7 +1996,6 @@ body {
 .watch__trailer__img {
     width: 50%;
     height: 100%;
-
 }
 
 .watch__trailer__img img {
@@ -2037,39 +2040,40 @@ body {
 
 #info--movie {
     display: flex;
-    gap: 2rem;
-    height: 50rem;
+    gap: 3rem;
 }
 
 #info--movie__detail {
     width: 70%;
     height: 100%;
-    background-color: #2b4360;
 }
 
 #info--movie__film--hot {
     width: 30%;
     height: 100%;
-    background-color: #55091e;
+
 }
 
 .info--movie__detail__describe {
     display: flex;
     gap: 1rem;
-    height: 40rem;
     position: relative;
 }
 
 .info--movie__detail__describe--img {
     width: 35%;
-    height: 100%;
+}
+
+.info--movie__detail__describe--img div {
+    width: 33%;
     position: absolute;
     transform: translateY(-30%);
     border: 1px solid #fff;
     box-shadow: 0 0 20px #fff;
+    height: 40rem;
 }
 
-.info--movie__detail__describe--img img {
+.info--movie__detail__describe--img div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2078,4 +2082,272 @@ body {
 .info--movie__detail__describe__info {
     width: 65%;
     height: 100%;
+}
+
+.info--movie__detail__describe__info div {
+    margin-bottom: 0.5rem;
+}
+
+.info--movie__detail__describe__info--name {
+    color: var(--white-color);
+    font-size: 3rem;
+}
+
+.info--movie__detail__describe__info--time,
+.info--movie__detail__describe__info--evaluate,
+.info--movie__detail__describe__info--country,
+.info--movie__detail__describe__info--producer,
+.info--movie__detail__describe__info--category,
+.info--movie__detail__describe__info--film--director,
+.info--movie__detail__describe__info--film--performers {
+    display: flex;
+    color: var(--white-color);
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+.info--movie__detail__describe__info--category,
+.info--movie__detail__describe__info--country,
+.info--movie__detail__describe__info--producer {
+    margin-top: 1rem;
+}
+.info--movie__detail__describe__info--evaluate {
+    align-items: center;
+}
+.info--movie__detail__describe__info--time div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info--movie__detail__describe__info--time div i,
+.info--movie__detail__describe__info--evaluate i {
+    color: var(--blueAqua-color);
+}
+
+.info--movie__detail__describe__info--evaluate {
+    gap: 1rem;
+}
+
+.info--movie__detail__describe__info--evaluate i,
+.info--movie__detail__describe__info--evaluate p:nth-child(2) {
+    font-size: 2rem;
+}
+
+.info--movie__detail__describe__info--country p:first-child,
+.info--movie__detail__describe__info--producer p:first-child,
+.info--movie__detail__describe__info--category p:first-child,
+.info--movie__detail__describe__info--film--director p:first-child,
+.info--movie__detail__describe__info--film--performers p:first-child {
+    opacity: 0.7;
+    width: 19%; 
+}
+
+.info--movie__detail__describe__info--country > div,
+.info--movie__detail__describe__info--producer > div,
+.info--movie__detail__describe__info--category > div,
+.info--movie__detail__describe__info--film--director > div,
+.info--movie__detail__describe__info--film--performers > div {
+    width: 81%;
+}
+
+
+.info--movie__detail__describe__info--category div,
+.info--movie__detail__describe__info--film--director div,
+.info--movie__detail__describe__info--film--performers div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 100%;
+}
+
+.info--movie__detail__describe__info--category div div,
+.info--movie__detail__describe__info--film--director div div,
+.info--movie__detail__describe__info--film--performers div div {
+    border: 1px solid #ccc;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.info--movie__detail__describe__info--category div div:hover,
+.info--movie__detail__describe__info--film--director div div:hover,
+.info--movie__detail__describe__info--film--performers div div:hover {
+    border: 1px solid var(--blueAqua-color);
+    color: var(--blueAqua-color);
+}
+
+.info--movie__detail__content--film {
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+.aside__movies--item__img {
+    position: relative;
+    width: 35rem;
+    height: 23rem;
+}
+.aside__movies--item__img--overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.aside__movies--item__img--overlay:hover {
+    opacity: 1;
+}
+
+.aside__movies--item__img--overlay div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    gap: 1.5rem;
+    color: #fff;
+    font-size: 1.7rem;
+    border: 0.1rem solid var(--blueAqua-color);
+    color: var(--blueAqua-color);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.aside__movies--item__img--overlay div:hover {
+    transform: scale(1.1);
+}
+
+
+.aside__movies--item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.aside__movies--item__name {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.info--movie__film--hot_btn {
+    border: 1px solid var(--blueAqua-color);
+    color: var(--blueAqua-color);
+    width: 15rem;
+    font-size: 1.8rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-left: 20rem;
+    transition: all 0.5s linear;
+}
+
+.info--movie__film--hot_btn:hover {
+    background-color: var(--blueAqua-color);
+    color: var(--white-color);
+}
+.info--movie__detail__showtimes--box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid var(--blueAqua-color);
+}
+.info--movie__detail__showtimes--box__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.info--movie__detail__showtimes--box__day div {
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--blueAqua-color);
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.info--movie__detail__showtimes--box__day--current {
+    background-color: var(--blueAqua-color);
+}
+
+.info--movie__detail__showtimes--box__day div:hover {
+    background-color: var(--blueAqua-color);
+}
+.info--movie__detail__showtimes--box__address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.info--movie__detail__showtimes--box__address select {
+    padding: 1rem 1rem;
+    width: 20rem;
+}
+
+.info--movie__detail__time--specifically {
+    border-bottom: 0.1rem solid var(--blueAqua-color);
+    padding-bottom: 2rem;
+}
+
+.info--movie__detail__time--specifically__box {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    height: 100%;
+}
+
+.info--movie__detail__time--specifically__name--cinema {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.info--movie__detail__time--specifically__box div:first-child{
+    width: 25%;
+    color: var(--white-color);
+    font-size: 1.5rem;
+
+}
+
+.info--movie__detail__time--specifically__box__info {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info--movie__detail__time--specifically__box__info p {
+    width: 75%;
+    width: 10rem;
+    height: 5rem;
+    border: 0.1rem solid var(--blueAqua-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.info--movie__detail__time--specifically__box__info p:hover {
+    background-color: var(--blueAqua-color);
 }

@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
+    <link rel="Icon" href="../Assets/Image/Logo/logo.png">
     <link rel="stylesheet" href="../Assets/Icon/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="../Assets/Css/main.css">
     <link rel="stylesheet" href="../Assets/Css/reponsive.css">
+    <script src="../Js/data.js"></script>
 </head>
 
 <body>
@@ -83,7 +85,7 @@
     <div id="watch__trailer">
         <div class="watch__trailer__box1"></div>
         <div class="watch__trailer__img">
-            <img src="../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Mật Vụ Ong.jpg" alt="">
+            <img src="" alt="">
         </div>
         <div class="watch__trailer__box2"></div>
         <div class="watch__trailer__overlay">
@@ -93,59 +95,169 @@
         </div>
     </div>
 
+    <div id="trailer">
+        <div></div>
+    </div>
+
     <div id="info--movie" class="padding__screen margin__top">
         <div id="info--movie__detail">
             <div class="info--movie__detail__describe">
                 <div class="info--movie__detail__describe--img">
-                    <img src="../Assets/Image/Poster/Vertical/Movie_Is_Showing/Mật Vụ Ong.webp" alt="">
+                    <div>
+                        <img src="" alt="">
+                    </div>
                 </div>
                 <div class="info--movie__detail__describe__info">
-                    <div>Kung Fu Panda 4</div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--name"></div>
+                    <div class="info--movie__detail__describe__info--time">
                         <div>
                             <i class="fa-regular fa-clock"></i>
-                            <p>94 Phút</p>
+                            <p></p>
                         </div>
                         <div>
                             <i class="fa-regular fa-calendar"></i>
-                            <p>08/03/2024</p>
+                            <p></p>
                         </div>
                     </div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--evaluate">
                         <i class="fa-solid fa-star"></i>
-                        <p>9.1</p>
-                        <p>(321 votes)</p>
+                        <p></p>
+                        <p></p>
                     </div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--country">
                         <p>Quốc gia:</p>
-                        <p>Trung quốc</p>
+                        <p></p>
                     </div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--producer">
                         <p>Nhà sản xuất:</p>
-                        <p>DreamWorks Animation, Universal Pictures</p>
+                        <p></p>
                     </div>
-                    <div>
-                        <p>Thể loại</p>
-                        <div>Hoạt Hình</div>
-                        <div>Hành động</div>
-                        <div>Phiêu lưu</div>
+                    <div class="info--movie__detail__describe__info--category">
+                        <p>Thể loại:</p>
+                        <div></div>
                     </div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--film--director">
                         <p>Đạo diễn:</p>
-                        <div>Mike Mitchell</div>
-                        <div>Stephanie Stine</div>
+                        <div></div>
+
                     </div>
-                    <div>
+                    <div class="info--movie__detail__describe__info--film--performers">
                         <p>Diễn viên:</p>
-                        <div>Jack Black</div>
-                        <div>Dustin Hoffman</div>
-                        <div>Awkwafina</div>
+                        <div>
+                            <div>Jack Black</div>
+                            <div>Dustin Hoffman</div>
+                            <div>Awkwafina</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="title__main" class="margin__top">
+                <div class="title__main__name">Nội dung phim</div>
+            </div>
+            <div class="info--movie__detail__content--film margin__top">
+                Bộ phim sẽ tiếp nối sau những cuộc đối đầu bùng nổ của "Godzilla đại chiến Kong", một cuộc phiêu lưu
+                hoàn toàn mới, đưa Kong và Godzilla cùng nhau chống lại một mối đe dọa khổng lồ chưa được khám phá, ẩn
+                sâu trong Trái Đất. Bộ phim sẽ đào sâu hơn vào phần lịch sử của những Titan, nguồn gốc cũng như những bí
+                ẩn tại Đảo Đầu Lâu, đồng thời khám phá trận chiến thần thoại đã tạo nên những sinh vật phi thường và sự
+                gắn kết của chúng với loài người.
+            </div>
+            <div id="title__main" class="margin__top">
+                <div class="title__main__name">Lịch chiếu</div>
+            </div>
+            <div class="info--movie__detail__showtimes margin__top">
+                <div class="info--movie__detail__showtimes--box">
+                    <div class="info--movie__detail__showtimes--box__day">
+                        <div class="info--movie__detail__showtimes--box__day--current">
+                            <p>Hôm nay</p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="info--movie__detail__showtimes--box__address">
+                        <div class="info--movie__detail__showtimes--box__address--city">
+                            <select name="" id="cityMovies">
+                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                <option value="TP Hà Nội">TP Hà Nội</option>
+                            </select>
+                        </div>
+                        <div class="info--movie__detail__showtimes--box__address--cinema">
+                            <select name="" id="cinemaMoviesSelect">
+                                <option value="Movies Nguyễn Du">Movies Nguyễn Du</option>
+                                <option value="Movies Sala">Movies Sala</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="info--movie__detail__time--specifically margin__top">
+                <div class="info--movie__detail__time--specifically__name--cinema">Movies Nguyễn Du</div>
+                <div class="info--movie__detail__time--specifically__box margin__top">
+                    <div>2D Phụ Đề</div>
+                    <div class="info--movie__detail__time--specifically__box__info">
+                    </div>
+                </div>
+            </div>
+            
         </div>
-        <div id="info--movie__film--hot"></div>
+        <div id="info--movie__film--hot">
+            <div id="title__main">
+                <div class="title__main__name">Phim hot đang chiếu</div>
+            </div>
+            <div id="aside__movies--list" class="margin__top">
+                <div class="aside__movies--item margin__top">
+                    <div class="aside__movies--item__img">
+                        <div class="aside__movies--item__img--overlay">
+                            <div>
+                                <i class="fa-solid fa-ticket"></i>
+                                <p>Mua vé</p>
+                            </div>
+                        </div>
+                        <img src="../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Mật Vụ Ong.jpg" alt="">
+                    </div>
+                    <div class="aside__movies--item__name">Mật Vụ Ong</div>
+                </div>
+                <div class="aside__movies--item margin__top">
+                    <div class="aside__movies--item__img">
+                        <div class="aside__movies--item__img--overlay">
+                            <div>
+                                <i class="fa-solid fa-ticket"></i>
+                                <p>Mua vé</p>
+                            </div>
+                        </div>
+                        <img src="../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Quỷ cẩu.jpg" alt="">
+                    </div>
+                    <div class="aside__movies--item__name">Quỷ Cẩu</div>
+                </div>
+                <div class="aside__movies--item margin__top">
+                    <div class="aside__movies--item__img">
+                        <div class="aside__movies--item__img--overlay">
+                            <div>
+                                <i class="fa-solid fa-ticket"></i>
+                                <p>Mua vé</p>
+                            </div>
+                        </div>
+                        <img src="../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Rượu cốt người.jpg" alt="">
+                    </div>
+                    <div class="aside__movies--item__name">Rượu cốt người</div>
+                </div>
+            </div>
+            <div class="info--movie__film--hot_btn margin__top">
+                <p>Xem thêm</p>
+                <p>></p>
+            </div>
+        </div>
     </div>
+
+
+
 
     <footer id="footer">
         <div class="footer__detail padding__screen margin__top">
