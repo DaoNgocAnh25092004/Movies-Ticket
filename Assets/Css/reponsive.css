@@ -184,6 +184,7 @@
     .movie__item--img__detail {
         display: none !important;
     }
+
     /* comment */
     #comment {
         flex-direction: column;
@@ -373,17 +374,25 @@
     .info--movie__detail__describe__info--film--performers>div {
         width: 70%;
     }
-    .info--movie__detail__showtimes--box__address  {
+
+    .info--movie__detail__showtimes--box__address {
         margin-top: 2rem;
     }
+
     .info--movie__detail__showtimes--box__address select {
         max-width: 17rem;
     }
+
     .info--movie__detail__time--specifically__box {
         flex-direction: column;
     }
+
     #trailer div iframe {
         width: 90%;
         height: 40rem;
+    }
+
+    .info--movie__detail__time--specifically__box__info {
+        justify-content: center;
     }
 }
