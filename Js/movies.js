@@ -37,7 +37,8 @@ if (listMovieIsShowing) {
     animationScroll();
 
     //Gọi lại hàm chuyển trang khi click btnBuyTicket
-    clickBuyTicket();
+    clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');
+
 }
 if (listMovieComingSoon) {
     movieComingSoon.forEach(item => {
@@ -75,7 +76,8 @@ if (listMovieComingSoon) {
     animationScroll();
 
     //Gọi lại hàm chuyển trang khi click btnBuyTicket
-    clickBuyTicket();
+    clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');
+
 }
 
 clickHeart();

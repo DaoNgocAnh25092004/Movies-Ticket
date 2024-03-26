@@ -1,4 +1,37 @@
-// ------------------------------Sự kiện ở thanh header
+var loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+
+
+//Sự kiện con chuột
+const cursor = document.querySelector('.cursor');
+var timeout;
+document.addEventListener('mousemove', (e) => {
+    let x = e.pageX - 10;
+    let y = e.clientY - 10;
+
+    cursor.style.top = y + 'px';
+    cursor.style.left = x + 'px';
+    cursor.style.display = 'block';
+
+    //Khi chuột dừng lại
+    function mouseStoppped() {
+        cursor.style.display = 'none';
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStoppped, 5000)
+
+})
+
+document.addEventListener('mouseout', (e) => {
+    cursor.style.display = 'none';
+})
+document.addEventListener('click', () => {
+    cursor.classList.add('expand');
+
+    setTimeout(() => {
+    cursor.classList.remove('expand');
+        
+    }, 500);
+})
 
 //Sự kiện bấm nút thanh tìm kiếm
 const iconSearchHeader = document.querySelector('.header__right__search i');
@@ -17,7 +50,7 @@ logoMovies.addEventListener('click', () => {
     setTimeout(() => {
         animationNextPage.style.display = 'none';
         window.location.href = 'index.html';
-    }, 1000);
+    }, loadTime);
 })
 //sự kiện bấm icon user 
 const iconUserHeader = document.querySelector('.header__right__user i');
@@ -29,7 +62,7 @@ iconUserHeader.addEventListener('click', () => {
     setTimeout(() => {
         animationNextPage.style.display = 'none';
         window.location.href = 'login.html';
-    }, 1000);
+    }, loadTime);
 })
 
 //sự kiện nút đổi màu
@@ -91,7 +124,7 @@ const iframeContainer = document.querySelector('#trailer div')
 
 function showTrailer() {
     const movieList = document.querySelectorAll('#movie__list div');
-    
+
     movieList.forEach((movie) => {
         const btnTrailer = movie.querySelector('.movie__item--img__detail--container div:last-child')
         const addressIdMovie = movie.getAttribute('data-movie-id');
@@ -136,24 +169,23 @@ function closeTrailer() {
     });
 }
 
-//Sự kiện chuyển trang khi mua vé
-function clickBuyTicket() {
-    const movieList = document.querySelectorAll('#movie__list div');
+//Sự kiện chuyển trang khi mua vé 
+function clickBuyTicket(list, btnBuy) {
+    const movieList = document.querySelectorAll(list);
 
     movieList.forEach((movie) => {
-        const btnBuyTicket = movie.querySelector('.movie__item--img__detail--container div:first-child');
+        const btnBuyTicket = movie.querySelector(btnBuy);
         const addressIdMovie = movie.getAttribute('data-movie-id');
         const posterMovie = movie.querySelector('img'); // Khi ở màn hình điện thoại
 
         if (btnBuyTicket && addressIdMovie !== null && posterMovie) {
             btnBuyTicket.addEventListener('click', () => {
                 const animationNextPage = document.getElementById('next--page');
-
                 animationNextPage.style.display = 'block';
                 setTimeout(() => {
                     animationNextPage.style.display = 'none';
                     window.location.href = `info_movie.html?movie-id=${addressIdMovie}`;
-                }, 1000);
+                }, loadTime);
             });
             posterMovie.addEventListener('click', () => {
                 const animationNextPage = document.getElementById('next--page');
@@ -162,7 +194,7 @@ function clickBuyTicket() {
                 setTimeout(() => {
                     animationNextPage.style.display = 'none';
                     window.location.href = `info_movie.html?movie-id=${addressIdMovie}`;
-                }, 1000);
+                }, loadTime);
             });
         }
     });
@@ -210,7 +242,7 @@ function nextPage() {
             setTimeout(() => {
                 animationNextPage.style.display = 'none';
                 window.location.href = hrefValue;
-            }, 1000);
+            }, loadTime);
 
         })
     })

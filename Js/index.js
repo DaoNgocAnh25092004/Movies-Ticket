@@ -68,9 +68,8 @@ btnMovieComingSoon.addEventListener('click', () => {
     animationScroll();
 
     //Gọi lại hàm chuyển trang khi click btnBuyTicket
-    clickBuyTicket();
+    clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');
 })
-
 //click vào phim đang chiếu 
 btnMovieIsShowing.addEventListener('click', () => {
 
@@ -124,7 +123,7 @@ btnMovieIsShowing.addEventListener('click', () => {
     animationScroll();
 
     //Gọi lại hàm chuyển trang khi click btnBuyTicket
-    clickBuyTicket();
+    clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');
 })
 
 // ---------------------------- Sự kiện click vào title main ở Góc điện ảnh
@@ -214,7 +213,7 @@ showTrailer();
 closeTrailer();
 
 //Gọi lại hàm chuyển trang khi click btnBuyTicket
-clickBuyTicket();
+clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');
 
 //Gọi lại hàm slider
 sliderHeader();
@@ -242,7 +241,4 @@ $(document).ready(function () {
 });
 
 //Gọi hàm chuyển trang
-clickBuyTicket();
-
-
-
+clickBuyTicket('#movie__list div', '.movie__item--img__detail--container div:first-child');

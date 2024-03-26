@@ -10,6 +10,10 @@ btnTrasferHtml.addEventListener('click', () => {
     }, 1000);
 })
 
+//Gọi Hàm chuyển trang khi click vào movielist bên phim đang hot
+clickBuyTicket('#aside__movies--list div', '.aside__movies--item__img--overlay div');
+
+
 //Xử lý update ngày 
 const currentToDay = document.querySelector('.info--movie__detail__showtimes--box__day div:first-child p:last-child');
 const nameTomorrow = document.querySelector('.info--movie__detail__showtimes--box__day div:nth-child(2) p:first-child');
