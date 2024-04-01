@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div class="background__animation"></div>
     <div class="cursor"></div>
     <div id="next--page">
         <div>
@@ -42,11 +43,11 @@
             <img src="../Assets/Image/Logo/logo.png" alt="">
         </div>
         <div class="header__center">
-            <div class="header__center__home ">
+            <div class="header__center__home">
                 <a href="../Html/index.html">Trang chủ</a>
             </div>
             <div class="header__center__movie title__header__index">
-                <a href="">Phim</a>
+                <a href="../Html/movies.html">Phim</a>
             </div>
             <div class="header__center__event">
                 <a href="../Html/event.html">Sự Kiện</a>
@@ -58,7 +59,14 @@
         <div class="header__right">
             <div class="header__right__search">
                 <div class="header__right__search--input">
-                    <input type="text">
+                    <div>
+                        <input type="text" placeholder="Enter the name movie">
+                        <div class="header__right__search--list">
+                            <ul class="todos__search"></ul>
+                            <div class="header__right__search--list__movies hide"></div>
+                        </div>
+                    </div>
+
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -66,10 +74,8 @@
                 <i class="fa-regular fa-user"></i>
             </div>
             <div class="header__right__control--light">
-                <div class="header__right__control--light">
-                    <div id="wrapper-btn">
-                        <input type="checkbox" name="checkbox" class="switch-btn">
-                        </div>
+                <div id="wrapper-btn">
+                    <input type="checkbox" name="checkbox" class="switch-btn">
                 </div>
             </div>
             <div class="header__menu--mobile">

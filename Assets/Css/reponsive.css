@@ -132,6 +132,13 @@
         width: 35rem;
     }
 
+    /* Search */
+    .header__right__search--input {
+        top: 1rem;
+        left: 0;
+        transform: translate(-37.5%, -10%) scale(0.6);
+    }
+
     /* slider header */
     .slider {
         margin-top: 6.4rem;
@@ -232,6 +239,11 @@
     /* promotion */
     .promotion__item--img {
         height: 17rem;
+    }
+
+    /* content */
+    #content__home--page {
+        z-index: 1 !important;
     }
 
     /* footer */

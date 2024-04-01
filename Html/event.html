@@ -10,9 +10,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="../Assets/Css/main.css">
     <link rel="stylesheet" href="../Assets/Css/reponsive.css">
+
 </head>
 
 <body>
+    <div class="background__animation"></div>
     <div class="cursor"></div>
     <div id="next--page">
         <div>
@@ -42,14 +44,14 @@
             <img src="../Assets/Image/Logo/logo.png" alt="">
         </div>
         <div class="header__center">
-            <div class="header__center__home ">
+            <div class="header__center__home">
                 <a href="../Html/index.html">Trang chủ</a>
             </div>
             <div class="header__center__movie">
                 <a href="../Html/movies.html">Phim</a>
             </div>
             <div class="header__center__event title__header__index">
-                <a href="">Sự Kiện</a>
+                <a href="../Html/event.html ">Sự Kiện</a>
             </div>
             <div class="header__center__cinema--price">
                 <a href="../Html/cinema__price.html">Rạp & Giá Vé</a>
@@ -58,7 +60,14 @@
         <div class="header__right">
             <div class="header__right__search">
                 <div class="header__right__search--input">
-                    <input type="text">
+                    <div>
+                        <input type="text" placeholder="Enter the name movie">
+                        <div class="header__right__search--list">
+                            <ul class="todos__search"></ul>
+                            <div class="header__right__search--list__movies hide"></div>
+                        </div>
+                    </div>
+
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -66,10 +75,8 @@
                 <i class="fa-regular fa-user"></i>
             </div>
             <div class="header__right__control--light">
-                <div class="header__right__control--light">
-                    <div id="wrapper-btn">
-                        <input type="checkbox" name="checkbox" class="switch-btn">
-                    </div>
+                <div id="wrapper-btn">
+                    <input type="checkbox" name="checkbox" class="switch-btn">
                 </div>
             </div>
             <div class="header__menu--mobile">

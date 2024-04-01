@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="background__animation"></div>
     <div class="cursor"></div>
     <div id="next--page">
         <div>
@@ -61,7 +62,14 @@
         <div class="header__right">
             <div class="header__right__search">
                 <div class="header__right__search--input">
-                    <input type="text">
+                    <div>
+                        <input type="text" placeholder="Enter the name movie">
+                        <div class="header__right__search--list">
+                            <ul class="todos__search"></ul>
+                            <div class="header__right__search--list__movies hide"></div>
+                        </div>
+                    </div>
+
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -299,7 +307,7 @@
             <span>|</span>
             <div class="title__main__detail--blog">Blog điện ảnh</div>
         </div>
-    </div> 
+    </div>
 
     <!-- Comment -->
     <div id="comment" class="padding__screen margin__top">

@@ -1,5 +1,3 @@
-var loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
-
 
 //Sự kiện con chuột
 const cursor = document.querySelector('.cursor');
@@ -17,6 +15,9 @@ document.addEventListener('mousemove', (e) => {
         cursor.style.display = 'none';
     }
     clearTimeout(timeout);
+    if (window.innerWidth < 740) {
+        timeout = setTimeout(mouseStoppped, 1000)
+    }
     timeout = setTimeout(mouseStoppped, 5000)
 
 })
@@ -28,18 +29,245 @@ document.addEventListener('click', () => {
     cursor.classList.add('expand');
 
     setTimeout(() => {
-    cursor.classList.remove('expand');
-        
+        cursor.classList.remove('expand');
+
     }, 500);
 })
 
-//Sự kiện bấm nút thanh tìm kiếm
-const iconSearchHeader = document.querySelector('.header__right__search i');
-const inputSeachHeader = document.querySelector('.header__right__search--input');
+//======================================== Xử lý tìm kiếm phim
 
+const iconSearchHeader = document.querySelector('.header__right__search > i');
+const inputSearchHeader = document.querySelector('.header__right__search--input');
+const boxInputSearch = document.querySelector('.header__right__search--input input')
+const todosSearch = document.querySelector('.todos__search')
+const dataMovieSearch = document.querySelectorAll('.header__right__search--list__movies div')
+const boxMovieSearch = document.querySelector('.header__right__search--list__movies')
+const boxHistorySearch = document.querySelector('.todos__search')
+
+//Khi click icon search
 iconSearchHeader.addEventListener('click', () => {
-    inputSeachHeader.classList.toggle('input__search--show');
+    inputSearchHeader.classList.toggle('input__search__show--width');
+
+    setTimeout(() => {
+        inputSearchHeader.classList.toggle('input__search__show--height');
+    }, 500);
 })
+
+//Xử lý sự kiện khi tìm kiếm ẩn hiện 
+boxInputSearch.addEventListener('input', () => {
+    boxInputSearch.focus()
+    let valueInput = boxInputSearch.value.trim();
+    
+    //Nếu giá trị không rỗng hiện thị danh sách
+    if (!(valueInput == '')) {
+        if (boxMovieSearch && boxMovieSearch.classList.contains('hide')) {
+            boxMovieSearch.classList.remove('hide')
+        }
+        if (!boxHistorySearch.classList.contains('hide')) {
+            boxHistorySearch.classList.add('hide')
+        }
+        //Gọi hàm so sánh giá trị
+        eqSearhData()
+        //Gọi hàm loading dữ liệu
+        loadingDataSearch();
+        //Gọi lại hàm chuyển trang khi click btnBuyTicket
+        clickBuyTicket('.header__right__search--list__movies > div', '.header__right__search--list__movies > div > div');
+    }
+
+    //Nếu giá trị rỗng thì hiện lịch sử tìm kiếm
+    if (valueInput == '') {
+        if (!boxMovieSearch.classList.contains('hide')) {
+            boxMovieSearch.classList.add('hide')
+        }
+        if (boxHistorySearch.classList.contains('hide')) {
+            boxHistorySearch.classList.remove('hide')
+        }
+    }
+})
+
+//Xử lý khi điền focus và chuyển trang
+boxInputSearch.addEventListener('focus', () => {
+    //Gọi hàm loading dữ liệu
+    loadingDataSearch();
+    //Khi blur sẽ thực hiện chuyển trang
+    boxInputSearch.addEventListener('blur', () => {
+        clickBuyTicketSearch('.header__right__search--list__movies > div', '.header__right__search--list__movies > div > div');
+    })
+})
+
+//Hàm chuyển trang và lưu lịch sử tìm kiếm
+function clickBuyTicketSearch(list, btnBuy) {
+    const movieList = document.querySelectorAll(list);
+    movieList.forEach((movie) => {
+        const btnBuyTicket = movie.querySelector(btnBuy);
+        const addressIdMovie = movie.getAttribute('data-movie-id');
+        const posterMovie = movie.querySelector('img'); // Khi ở màn hình điện thoại
+
+        if (btnBuyTicket && addressIdMovie !== null && posterMovie) {
+            btnBuyTicket.addEventListener('click', () => {
+                const animationNextPage = document.getElementById('next--page');
+                animationNextPage.style.display = 'block';
+
+                //Gọi hàm xử lý lưu lịch sử tìm kiếm
+                handleSaveDataSearch();
+
+                setTimeout(() => {
+                    animationNextPage.style.display = 'none';
+                    window.location.href = `info_movie.html?movie-id=${addressIdMovie}`;
+                }, 1000);
+            });
+        }
+    });
+}
+
+
+//Xử lý lưu thông tin lịch sử tìm kiếm
+boxInputSearch.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        //Gọi hàm xử lý lưu lịch sử tìm kiếm
+        handleSaveDataSearch();
+    }
+})
+
+//Hàm xử lý khi lưu lịch sử
+function handleSaveDataSearch() {
+    let valueInputHistory = boxInputSearch.value.trim();
+    let dataStorage = JSON.parse(localStorage.getItem('dataSearch'));
+
+    if (valueInputHistory.length > 0) {
+        //Xử lý khi trùng lịch sử tìm kiếm
+        let isExist = false;
+        dataStorage.forEach(item => {
+            if (item === valueInputHistory) {
+                isExist = true;
+            }
+        });
+        if (!isExist) {
+            addDataElement(valueInputHistory);
+            saveDataSearch();
+        }
+    }
+}
+
+//Thêm phần tử lịch sử trình duyệt
+function addDataElement(data) {
+    var li = document.createElement('li')
+
+    li.innerHTML = `
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>${data}</span>
+                        <i class="fa-solid fa-trash"></i>
+                    `
+
+    //Khi click vào một item lịch sử trình duyệt thì điền giá trị vào ô input và hiện thị ra phim theo giá trị
+    li.addEventListener('click', (event) => {
+        if (event.target.tagName !== 'I') {
+            boxInputSearch.value = li.querySelector('span').innerText;
+            boxInputSearch.focus()
+            let valueInput = boxInputSearch.value;
+            if (!(valueInput == '')) {
+                if (boxMovieSearch && boxMovieSearch.classList.contains('hide')) {
+                    boxMovieSearch.classList.remove('hide')
+                }
+                if (!boxHistorySearch.classList.contains('hide')) {
+                    boxHistorySearch.classList.add('hide')
+                }
+                //Gọi hàm loading dữ liệu
+                loadingDataSearch();
+
+                let listMovies = document.querySelectorAll('.header__right__search--list__movies > div')
+                let valueSearch = valueInput.trim().toLowerCase();
+                listMovies.forEach(movie => {
+                    if (movie.innerText.toLowerCase().includes(valueSearch)) {
+                        movie.classList.remove('hide');
+                    } else {
+                        movie.classList.add('hide');
+                    }
+                })
+            }
+        }
+    })
+    //Xử lý khi click xóa dữ liệu tìm kiếm
+    li.querySelector('i:last-child').addEventListener('click', function () {
+        if (!(boxMovieSearch && boxMovieSearch.classList.contains('hide'))) {
+            boxMovieSearch.classList.add('hide')
+        }
+        boxInputSearch.value = '';
+        boxInputSearch.focus()
+        this.parentElement.remove();
+        saveDataSearch()
+    })
+
+    //Thực hiện thêm vào đầu danh sách
+    if (todosSearch.firstChild) {
+        todosSearch.insertBefore(li, todosSearch.firstChild);
+    } else {
+        todosSearch.appendChild(li);
+    }
+}
+
+//Hàm thực hiện lưu lịch sử trình duyệt
+function saveDataSearch() {
+    let dataSearch = todosSearch.querySelectorAll('li');
+    let dataStorage = [];
+
+    dataSearch.forEach(item => {
+        let text = item.querySelector('span').innerText;
+        dataStorage.push(text)
+    })
+    localStorage.setItem('dataSearch', JSON.stringify(dataStorage));
+
+}
+
+//Hàm khởi tạo lịch sử trình duyệt
+function initDataSearch() {
+    let data = JSON.parse(localStorage.getItem('dataSearch'));
+    if (data) {
+        data.forEach(dataItem => {
+            addDataElement(dataItem)
+        })
+    }
+}
+//Gọi hàm khởi tạo lịch sử trình duyệt
+initDataSearch();
+
+
+//Hàm Loading dữ liệu lên thanh search
+function loadingDataSearch() {
+    boxMovieSearch.innerHTML = ''
+    dataSearch.forEach(item => {
+        boxMovieSearch.innerHTML += `<div data-movie-id="${item.id}">   
+                                        <div>
+                                            <div>
+                                                <img src="${item.imgPoster}" alt="">
+                                            </div>
+                                            <div class = "header__right__search--list__movies--name">
+                                                ${item.name}
+                                            </div>
+                                        </div>
+                                    </div>`
+    })
+}
+
+//Hàm so sánh giá trị để hiện ra phim theo giá trị
+function eqSearhData() {
+    let valueSearch = boxInputSearch.value.trim().toLowerCase();
+    boxInputSearch.addEventListener('input', () => {
+        valueSearch = boxInputSearch.value.trim().toLowerCase();
+        let listMovies = document.querySelectorAll('.header__right__search--list__movies > div')
+
+        listMovies.forEach(movie => {
+            if (movie.innerText.toLowerCase().includes(valueSearch)) {
+                movie.classList.remove('hide');
+            } else {
+                movie.classList.add('hide');
+            }
+        })
+    })
+}
+
+//======================================== Xử lý tìm kiếm phim
+
 //Sự kiện click logo 
 const logoMovies = document.querySelector('.header__left img');
 
@@ -50,7 +278,7 @@ logoMovies.addEventListener('click', () => {
     setTimeout(() => {
         animationNextPage.style.display = 'none';
         window.location.href = 'index.html';
-    }, loadTime);
+    }, 1000);
 })
 //sự kiện bấm icon user 
 const iconUserHeader = document.querySelector('.header__right__user i');
@@ -62,7 +290,7 @@ iconUserHeader.addEventListener('click', () => {
     setTimeout(() => {
         animationNextPage.style.display = 'none';
         window.location.href = 'login.html';
-    }, loadTime);
+    }, 1000);
 })
 
 //sự kiện nút đổi màu
@@ -181,20 +409,20 @@ function clickBuyTicket(list, btnBuy) {
         if (btnBuyTicket && addressIdMovie !== null && posterMovie) {
             btnBuyTicket.addEventListener('click', () => {
                 const animationNextPage = document.getElementById('next--page');
-                animationNextPage.style.display = 'block';
+                animationNextPage.style.display = 'block'
                 setTimeout(() => {
                     animationNextPage.style.display = 'none';
                     window.location.href = `info_movie.html?movie-id=${addressIdMovie}`;
-                }, loadTime);
+                }, 1000);
             });
             posterMovie.addEventListener('click', () => {
                 const animationNextPage = document.getElementById('next--page');
 
-                animationNextPage.style.display = 'block';
+                animationNextPage.style.display = 'block'
                 setTimeout(() => {
                     animationNextPage.style.display = 'none';
                     window.location.href = `info_movie.html?movie-id=${addressIdMovie}`;
-                }, loadTime);
+                }, 1000);
             });
         }
     });
@@ -242,7 +470,7 @@ function nextPage() {
             setTimeout(() => {
                 animationNextPage.style.display = 'none';
                 window.location.href = hrefValue;
-            }, loadTime);
+            }, 1000);
 
         })
     })
@@ -285,3 +513,45 @@ function updateDay(currentToDay, tomorrow, dateTomorrow, afterTomorrow, dateAfte
     afterTomorrow.innerText = `${afterTomorrowOfWeek}`
     dateAfterTomorrow.innerText = `${afterTomorrowDayOfMonth}/${afterTomorrowMonth}`;
 }
+
+//Hiệu ứng background mưa tuyết
+function randomColor() {
+    var charColor = '123456789ABCDEF';
+    var color = '#';
+
+    for (let i = 0; i < 6; i++) {
+        color += charColor[Math.floor(Math.random() * charColor.length)];
+    }
+    return color
+}
+var backgroundAnimation = document.querySelector('.background__animation');
+var bodersArray = ['50%', '0'];
+var blursArray = ['0', '5px']
+var widthBackGround = document.documentElement.clientWidth;
+var heightBackGround = document.documentElement.clientHeight;
+var count = 100;
+
+function createBackGround() {
+    for (var i = 0; i < count; i++) {
+        var randomLeft = Math.floor(Math.random() * widthBackGround);
+        var randomTop = Math.floor(Math.random() * heightBackGround);
+        var border = Math.floor(Math.random() * 2);
+        var blur = Math.floor(Math.random() * 3);
+        var widtdElement = Math.floor(Math.random() * 5) + 5;
+        var timeAnimation = Math.floor(Math.random() * 8) + 5;
+
+        var div = document.createElement('div');
+        div.style.backgroundColor = randomColor();
+        div.style.position = 'fixed';
+        div.style.width = widtdElement + 'px';
+        div.style.height = widtdElement + 'px';
+        div.style.marginLeft = randomLeft + 'px';
+        div.style.marginTop = randomTop + 'px';
+        div.style.borderRadius = bodersArray[border];
+        div.style.filter = 'blur(' + blursArray[blur] + ')';
+        div.style.animation = 'move ' + timeAnimation + 's ease-in infinite'
+
+        backgroundAnimation.appendChild(div);
+    }
+}
+createBackGround()

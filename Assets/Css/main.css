@@ -3,7 +3,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --bluePurple-color: rgb(14, 2, 35);
+    --bluePurple-color: rgb(7, 0, 18);
     --blueAqua-color: #1ea6bb;
     --overLay-color: #f8fcfd;
     --grey-color: #000;
@@ -14,7 +14,7 @@ body.body--color__change {
     --black-color: #fff;
     --bluePurple-color: #fff;
     --grey-color: rgb(105, 104, 104);
-    --shadow-color : #fff;
+    --shadow-color: #fff;
 
 }
 
@@ -28,15 +28,23 @@ html {
     font-family: "Poppins";
     font-size: 62.5%;
 }
+
 html * {
     cursor: none !important;
 
 }
+
 body {
     background-color: var(--bluePurple-color);
     transition: all 0.3s ease;
     overflow-x: hidden;
     position: relative;
+}
+
+.background__animation {
+    position: absolute;
+    inset: 0;
+    z-index: -999 !important;
 }
 
 /* Chuyển trang */
@@ -463,6 +471,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 2;
+    width: 100%;
 }
 
 .overlay {
@@ -536,34 +545,168 @@ body {
     gap: 4rem;
 }
 
+/* Search */
 .header__right__search {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    position: relative;
 }
 
 .header__right__search--input {
+    position: absolute;
+    right: 0;
+    top: -1rem;
     overflow: hidden;
-    width: 0;
+    margin-right: 7rem;
+    width: 0rem;
+    height: 6rem;
+    border-radius: 1rem;
+    transition: all 0.5s linear;
+    background: url(../Image/Login/1.jpg);
+}
+
+.header__right__search--input>div {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: all 0.5s linear;
 }
 
-.header__right__search--input input {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
-    border-radius: 25rem;
-    border: 0.1rem solid var(--white-color);
+.header__right__search--input>div input {
+    width: 95%;
+    border: none;
     outline: none;
+    margin: 1rem 0 1rem 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0 1.15rem 0 1.5rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+    font-size: 1.7rem;
+    transition: all 0.2s linear;
+
 }
 
-.header__right__search--input.input__search--show {
-    width: 25rem;
+.header__right__search--input>div input::placeholder {
+    color: #fff;
 }
 
-.header__center a,
-.header__right i {
+.header__right__search--input>div input:focus {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1.5rem 0 1.5rem 0;
+}
+
+.header__right__search--input.input__search__show--width {
+    width: 60rem;
+}
+
+.header__right__search--input.input__search__show--height {
+    height: 50rem;
+}
+
+.header__right__search--list {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 95%;
+    margin: 1rem 0 0 2rem;
+    border-radius: 0.4rem
+}
+.header__right__search--list ul li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    transition: all 0.1s linear;
+    position: relative;
+}
+
+.header__right__search--list ul li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header__right__search--list ul li span {
+    overflow: hidden;
+    margin:0 2rem 0 4rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.7rem;
+    color: #fff;
+}
+.header__right__search--list ul li i:first-child {
+    position: absolute;
+}
+.header__right__search--list ul li i:first-child {
+    color: #fff;
+}
+
+.header__right__search--list ul li i:last-child {
+    transition: all 0.5s linear;
+    color: #fff;
+}
+
+.header__right__search--list ul li i:last-child:hover {
+    transform: scale(1.5);
+    color: var(--blueAqua-color);
+}
+
+.header__right__search--list li:not(li:first-child) {
+    border-top: 0.1rem solid #ccc;
+}
+
+.header__right__search--list {
+    max-height: 41rem;
+    overflow-y: auto;
+}
+
+.header__right__search--list::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.header__right__search--list::-webkit-scrollbar-thumb {
+    background-color: var(--blueAqua-color);
+    border-radius: 0.1rem;
+}
+
+.header__right__search--list::-webkit-scrollbar-track {
+    background-color: #000;
+    border-radius: 0.1rem;
+}
+
+/* Search data */
+.header__right__search--list__movies > div > div{
+    height: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+    /* display: block; */
+}
+.header__right__search--list__movies > div >div:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.header__right__search--list__movies > div >div:not(.header__right__search--list__movies > div:first-child) {
+    border-top: 0.1rem solid #ccc;
+}
+.header__right__search--list__movies > div > div > div:first-child {
+    height: 100%;
+    width: 13rem;
+    flex-shrink: 0;
+}
+.header__right__search--list__movies > div > div > div:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__right__search--list__movies > div > div > div:last-child {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__right i:hover {
@@ -903,6 +1046,10 @@ body {
     color: var(--white-color);
 }
 
+#title__main * {
+    z-index: 1;
+}
+
 .title__main__name {
     font-size: 2rem;
     font-weight: 600;
@@ -1082,6 +1229,11 @@ body {
     gap: 3rem;
 }
 
+#comment * {
+    z-index: 1;
+
+}
+
 .comment__left,
 .comment__right {
     height: 45rem !important;
@@ -1221,6 +1373,8 @@ body {
 #content__home--page {
     color: var(--white-color);
     font-size: 1.5rem;
+    z-index: 3 !important;
+
 }
 
 #content__home--page p:not(:first-child) {
@@ -1425,8 +1579,7 @@ body {
     margin: 1rem 0;
 }
 
-.footer__adress p:last-child span {
-}
+.footer__adress p:last-child span {}
 
 .footer__adress p:last-child span:hover {
     color: var(--blueAqua-color);
@@ -1494,7 +1647,7 @@ body {
     overflow: hidden;
     border-radius: 1rem;
     height: 100%;
-    
+
 }
 
 .list__promotion__item--detail {
@@ -1586,7 +1739,7 @@ body {
 #cinema {
     display: flex;
     justify-content: space-between;
-    color: var(--white-color)
+    color: var(--white-color);
 }
 
 .cinema__box1--name {
@@ -1848,8 +2001,7 @@ body {
 .form__login__support--memorize input,
 .form__login__support--memorize label,
 .form__login__support--help p,
-.form__login__info--register p:last-child {
-}
+.form__login__info--register p:last-child {}
 
 .form__login__support--memorize label {
     margin-left: 0.3rem;
@@ -2051,7 +2203,7 @@ body {
     transform: translateY(-30%);
     border: 1px solid #fff;
     box-shadow: 0 0 20px #fff;
-    height: 40rem;
+    height: 38rem;
 }
 
 .info--movie__detail__describe--img div img {
@@ -2086,14 +2238,17 @@ body {
     gap: 2rem;
     font-size: 1.5rem;
 }
+
 .info--movie__detail__describe__info--category,
 .info--movie__detail__describe__info--country,
 .info--movie__detail__describe__info--producer {
     margin-top: 1rem;
 }
+
 .info--movie__detail__describe__info--evaluate {
     align-items: center;
 }
+
 .info--movie__detail__describe__info--time div {
     display: flex;
     align-items: center;
@@ -2120,14 +2275,14 @@ body {
 .info--movie__detail__describe__info--film--director p:first-child,
 .info--movie__detail__describe__info--film--performers p:first-child {
     opacity: 0.7;
-    width: 19%; 
+    width: 19%;
 }
 
-.info--movie__detail__describe__info--country > div,
-.info--movie__detail__describe__info--producer > div,
-.info--movie__detail__describe__info--category > div,
-.info--movie__detail__describe__info--film--director > div,
-.info--movie__detail__describe__info--film--performers > div {
+.info--movie__detail__describe__info--country>div,
+.info--movie__detail__describe__info--producer>div,
+.info--movie__detail__describe__info--category>div,
+.info--movie__detail__describe__info--film--director>div,
+.info--movie__detail__describe__info--film--performers>div {
     width: 81%;
 }
 
@@ -2149,6 +2304,7 @@ body {
     border-radius: 1rem;
     transition: all 0.5s linear;
 }
+
 .info--movie__detail__describe__info--category div div:hover,
 .info--movie__detail__describe__info--film--director div div:hover,
 .info--movie__detail__describe__info--film--performers div div:hover {
@@ -2160,6 +2316,7 @@ body {
     color: var(--white-color);
     font-size: 1.5rem;
 }
+
 .aside__movies--item__img {
     position: relative;
     width: 40rem;
@@ -2167,6 +2324,7 @@ body {
     border-radius: 1rem;
     overflow: hidden;
 }
+
 .aside__movies--item__img--overlay {
     position: absolute;
     inset: 0;
@@ -2207,6 +2365,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .aside__movies--item__name {
     color: var(--white-color);
     font-size: 1.8rem;
@@ -2232,6 +2391,7 @@ body {
     background-color: var(--blueAqua-color);
     color: var(--white-color);
 }
+
 .info--movie__detail__showtimes--box {
     display: flex;
     justify-content: space-around;
@@ -2239,12 +2399,14 @@ body {
     padding-bottom: 2rem;
     border-bottom: 0.2rem solid var(--blueAqua-color);
 }
+
 .info--movie__detail__showtimes--box__day {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
+
 .info--movie__detail__showtimes--box__day div {
     padding: 1rem 1rem;
     border-radius: 1rem;
@@ -2266,12 +2428,14 @@ body {
 .info--movie__detail__showtimes--box__day div:hover {
     background-color: var(--blueAqua-color);
 }
+
 .info--movie__detail__showtimes--box__address {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
+
 .info--movie__detail__showtimes--box__address select {
     padding: 1rem 1rem;
     width: 20rem;
@@ -2296,7 +2460,7 @@ body {
     font-size: 1.8rem;
 }
 
-.info--movie__detail__time--specifically__box div:first-child{
+.info--movie__detail__time--specifically__box div:first-child {
     width: 25%;
     color: var(--white-color);
     font-size: 1.5rem;
@@ -2325,6 +2489,7 @@ body {
     border-radius: 0.5rem;
     transition: all 0.3s linear;
 }
+
 .info--movie__detail__time--specifically__box__info p:hover {
     background-color: var(--blueAqua-color);
 }
@@ -2344,13 +2509,14 @@ body {
 }
 
 @keyframes cursorAnim {
-   from {
-    transform: scale(1);
-   }
-   to {
-    transform: scale(0.7);
-   }
-    
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.7);
+    }
+
 }
 
 .cursor::after {
@@ -2365,29 +2531,55 @@ body {
     opacity: 0.5;
     animation: cursorAnim2 .5s infinite alternate;
 }
+
 @keyframes cursorAnim2 {
     from {
-     transform: scale(1);
+        transform: scale(1);
     }
-    to {
-     transform: scale(0.4);
-    }
-     
- }
 
- .expand{
+    to {
+        transform: scale(0.4);
+    }
+
+}
+
+.expand {
     animation: cursorAnim3 .5s forwards;
     border: 1px solid #01404a;
- }
- @keyframes cursorAnim3 {
-   0% {
-    transform: scale(1);
-   }
-   50% {
-    transform:  scale(3);
-   }
-   100% {
-    transform:  scale(1);
-    opacity: 0;
-   }
- }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng */
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+}
