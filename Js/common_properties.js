@@ -134,7 +134,7 @@ function handleSaveDataSearch() {
     let valueInputHistory = boxInputSearch.value.trim();
     let dataStorage = JSON.parse(localStorage.getItem('dataSearch'));
 
-    if (valueInputHistory.length > 0) {
+    if (valueInputHistory.length > 0 && dataStorage != null) {
         //Xử lý khi trùng lịch sử tìm kiếm
         let isExist = false;
         dataStorage.forEach(item => {
@@ -146,6 +146,9 @@ function handleSaveDataSearch() {
             addDataElement(valueInputHistory);
             saveDataSearch();
         }
+    } else if(dataStorage == null) {
+        addDataElement(valueInputHistory);
+        saveDataSearch();
     }
 }
 
