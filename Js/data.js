@@ -398,7 +398,7 @@ var dataSearch = [
         id: 'A12',
         name: 'Lễ Trừ Tà',
         trailer: '<iframe width="1385" height="590" src="https://www.youtube.com/embed/CUj_pINlYR8?si=nn-MGBoV5AHOH_2z&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-        imgPoster: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Lễ Trừ Tà.webp',
+        imgPoster: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Lễ trừ tà.webp',
     },
 
     {
