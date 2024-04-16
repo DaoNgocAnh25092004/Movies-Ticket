@@ -43,31 +43,56 @@ const todosSearch = document.querySelector('.todos__search')
 const dataMovieSearch = document.querySelectorAll('.header__right__search--list__movies div')
 const boxMovieSearch = document.querySelector('.header__right__search--list__movies')
 const boxHistorySearch = document.querySelector('.todos__search')
+const loaderData = document.querySelector('.loader-data')
 
 //Khi click icon search
 iconSearchHeader.addEventListener('click', () => {
     inputSearchHeader.classList.toggle('input__search__show--width');
-
+    boxInputSearch.value = ''
+    if (!boxMovieSearch.classList.contains('hide')) {
+        boxMovieSearch.classList.add('hide')
+    }
+    if (boxHistorySearch.classList.contains('hide')) {
+        boxHistorySearch.classList.remove('hide')
+    }
     setTimeout(() => {
         inputSearchHeader.classList.toggle('input__search__show--height');
     }, 500);
 })
 
+//----Xử lý ngay khi cả ô input chưa nhập
+let valueInputInitial = boxInputSearch.value.trim();
+
+//Nếu giá trị rỗng thì hiện lịch sử tìm kiếm
+if (valueInputInitial == '') {
+    if (!boxMovieSearch.classList.contains('hide')) {
+        boxMovieSearch.classList.add('hide')
+    }
+    if (boxHistorySearch.classList.contains('hide')) {
+        boxHistorySearch.classList.remove('hide')
+    }
+}
+
 //Xử lý sự kiện khi tìm kiếm ẩn hiện 
 boxInputSearch.addEventListener('input', () => {
     boxInputSearch.focus()
     let valueInput = boxInputSearch.value.trim();
-    
+
     //Nếu giá trị không rỗng hiện thị danh sách
     if (!(valueInput == '')) {
+        //Ẩn hiệu ứng không có dữ liệu
+        loaderData.classList.add('hide')
+
+        //Gọi hàm so sánh giá trị
+        eqSearhData();
+
+        //Xử lý ẩn hiện lịch sử và danh sách
         if (boxMovieSearch && boxMovieSearch.classList.contains('hide')) {
             boxMovieSearch.classList.remove('hide')
         }
         if (!boxHistorySearch.classList.contains('hide')) {
             boxHistorySearch.classList.add('hide')
         }
-        //Gọi hàm so sánh giá trị
-        eqSearhData()
         //Gọi hàm loading dữ liệu
         loadingDataSearch();
         //Gọi lại hàm chuyển trang khi click btnBuyTicket
@@ -76,6 +101,17 @@ boxInputSearch.addEventListener('input', () => {
 
     //Nếu giá trị rỗng thì hiện lịch sử tìm kiếm
     if (valueInput == '') {
+        //Hiện hiệu ứng không có dữ liệu
+        let dataStorage = JSON.parse(localStorage.getItem('dataSearch'));
+        console.log(dataStorage.length);
+        if (dataStorage != null) {
+            loaderData.classList.add('hide')
+        }
+        if (dataStorage.length == 0) {
+            loaderData.classList.remove('hide')
+        }
+
+        //Xử lý ẩn hiện lịch sử và danh sách
         if (!boxMovieSearch.classList.contains('hide')) {
             boxMovieSearch.classList.add('hide')
         }
@@ -146,7 +182,7 @@ function handleSaveDataSearch() {
             addDataElement(valueInputHistory);
             saveDataSearch();
         }
-    } else if(dataStorage == null) {
+    } else if (dataStorage == null) {
         addDataElement(valueInputHistory);
         saveDataSearch();
     }
@@ -201,18 +237,29 @@ function addDataElement(data) {
         saveDataSearch()
     })
 
+
     //Thực hiện thêm vào đầu danh sách
     if (todosSearch.firstChild) {
         todosSearch.insertBefore(li, todosSearch.firstChild);
     } else {
         todosSearch.appendChild(li);
     }
+
+
 }
 
 //Hàm thực hiện lưu lịch sử trình duyệt
 function saveDataSearch() {
     let dataSearch = todosSearch.querySelectorAll('li');
     let dataStorage = [];
+
+    //Xử lý thêm hiệu ứng khi không có dữ liệu
+    if (dataSearch.length == 0) {
+        loaderData.classList.remove('hide')
+    }
+    if (dataSearch.length > 0) {
+        loaderData.classList.add('hide')
+    }
 
     dataSearch.forEach(item => {
         let text = item.querySelector('span').innerText;
@@ -225,6 +272,14 @@ function saveDataSearch() {
 //Hàm khởi tạo lịch sử trình duyệt
 function initDataSearch() {
     let data = JSON.parse(localStorage.getItem('dataSearch'));
+
+    //Xử lý thêm hiệu ứng khi không có dữ liệu
+    if (data.length == 0) {
+        loaderData.classList.remove('hide')
+    }
+    if (data.length > 0) {
+        loaderData.classList.add('hide')
+    }
     if (data) {
         data.forEach(dataItem => {
             addDataElement(dataItem)

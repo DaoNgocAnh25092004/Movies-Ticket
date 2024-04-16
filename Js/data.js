@@ -381,7 +381,7 @@ var dataSearch = [
     },
 
     {
-        id: 'A010',
+        id: 'A10',
         name: 'Sáng Đèn',
         trailer: '<iframe width="1385" height="590" src="https://www.youtube.com/embed/jBC0GDOScSk?si=VhPary1w2KFuxxty&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
         imgPoster: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Sáng đèn.webp',
@@ -918,26 +918,25 @@ var infomationMovie = [
                 showTimesToDay: ['00:30', '01:45', '03:20', '05:10', '07:55', '09:30', '10:45', '12:20', '13:35', '15:00', '17:25', '19:40', '22:30'],
                 showTimesTomorrow: ['00:15', '02:40', '04:55', '06:30', '08:25', '10:50', '11:15', '13:20', '14:45', '16:10', '18:35', '20:50'],
                 showTimesAfterTomorrow: ['01:05', '03:30', '05:45', '07:20', '09:15', '11:40', '12:05', '14:10', '15:35', '17:00', '19:25', '21:50'],
-                area1 : {
-                    nameArea : 'Rạp 1',
-                    showTimesToDayArea : ['00:30',, '05:10', '10:45', '15:00', '22:30'],
-                    showTimesTomorrowArea : ['00:15', '06:30', '11:15', '16:10'],
-                    showTimesAfterTomorrowArea : ['01:05', '07:20', '12:05', '17:00']
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:30', , '05:10', '10:45', '15:00', '22:30'],
+                    showTimesTomorrowArea: ['00:15', '06:30', '11:15', '16:10'],
+                    showTimesAfterTomorrowArea: ['01:05', '07:20', '12:05', '17:00']
                 },
-                area2 : {
-                    nameArea : 'Rạp 2',
-                    showTimesToDayArea : ['01:45', '07:55', '12:20', '17:25'],
-                    showTimesTomorrowArea : ['02:40', '08:25', '13:20', '18:35'],
-                    showTimesAfterTomorrowArea : ['03:30', '09:15', '14:10', '19:25']
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['01:45', '07:55', '12:20', '17:25'],
+                    showTimesTomorrowArea: ['02:40', '08:25', '13:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['03:30', '09:15', '14:10', '19:25']
                 },
-                area3 : {
-                    nameArea : 'Rạp 3',
-                    showTimesToDayArea : ['03:20', '09:30', '13:35', '19:40'],
-                    showTimesTomorrowArea : ['04:55', '10:50', '14:45', '20:50'],
-                    showTimesAfterTomorrowArea : ['05:45', '11:40', '15:35', '21:50']
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['03:20', '09:30', '13:35', '19:40'],
+                    showTimesTomorrowArea: ['04:55', '10:50', '14:45', '20:50'],
+                    showTimesAfterTomorrowArea: ['05:45', '11:40', '15:35', '21:50']
                 }
             },
-            
             {
                 id: 'B02',
                 name: 'Quỷ cẩu',
@@ -955,7 +954,26 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Quỷ cẩu.jpg',
                 showTimesToDay: ['02:20', '03:35', '04:50', '06:15', '08:30', '09:55', '11:10', '13:25', '14:40', '16:05', '18:20', '20:35'],
                 showTimesTomorrow: ['00:45', '02:10', '04:35', '06:50', '08:15', '10:40', '12:05', '14:30', '16:45', '18:10', '20:25', '22:50'],
-                showTimesAfterTomorrow: ['01:30', '03:55', '05:20', '07:45', '09:10', '11:25', '13:50', '15:15', '17:40', '19:05', '21:30', '23:55']
+                showTimesAfterTomorrow: ['01:30', '03:55', '05:20', '07:45', '09:10', '11:25', '13:50', '15:15', '17:40', '19:05', '21:30', '23:55'],
+
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:20', '06:15', '11:10', '16:05'],
+                    showTimesTomorrowArea: ['00:45', '06:50', '12:05', '18:10'],
+                    showTimesAfterTomorrowArea: ['01:30', '07:45', '13:50', '19:05']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:35', '08:30', '13:25', '18:20'],
+                    showTimesTomorrowArea: ['02:10', '08:15', '14:30', '20:25'],
+                    showTimesAfterTomorrowArea: ['03:55', '09:10', '15:15', '21:30']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['04:50', '09:55', '14:40', '20:35'],
+                    showTimesTomorrowArea: ['04:35', '10:40', '16:45', '22:50'],
+                    showTimesAfterTomorrowArea: ['05:20', '11:25', '17:40', '23:55']
+                }
             },
 
             {
@@ -975,8 +993,29 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Kinh Cầu Ma.jpg',
                 showTimesToDay: ['01:10', '02:35', '04:00', '06:25', '08:40', '10:05', '11:30', '13:55', '15:20', '17:35', '19:50', '21:15'],
                 showTimesTomorrow: ['00:25', '02:50', '04:15', '06:40', '08:05', '10:30', '11:55', '14:20', '16:35', '18:00', '20:25', '22:50'],
-                showTimesAfterTomorrow: ['01:40', '03:05', '05:30', '07:55', '09:20', '11:45', '13:10', '15:35', '17:50', '19:15', '21:40', '23:05']
+                showTimesAfterTomorrow: ['01:40', '03:05', '05:30', '07:55', '09:20', '11:45', '13:10', '15:35', '17:50', '19:15', '21:40', '23:05'],
+
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:10', '06:25', '11:30', '16:35'],
+                    showTimesTomorrowArea: ['00:25', '06:40', '12:55', '19:10'],
+                    showTimesAfterTomorrowArea: ['01:40', '07:55', '13:10', '19:15']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:35', '08:40', '13:55', '19:50'],
+                    showTimesTomorrowArea: ['02:50', '09:05', '15:20', '21:35'],
+                    showTimesAfterTomorrowArea: ['03:05', '09:20', '15:35', '21:40']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['04:00', '10:05', '15:20', '21:15'],
+                    showTimesTomorrowArea: ['04:15', '10:30', '16:45', '23:00'],
+                    showTimesAfterTomorrowArea: ['05:30', '11:45', '17:50', '23:05']
+                }
             },
+
+
 
             {
                 id: 'B04',
@@ -995,7 +1034,28 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Quỷ Ăn Tạng.jpg',
                 showTimesToDay: ['00:55', '02:20', '03:45', '06:10', '08:25', '10:50', '12:15', '14:40', '16:05', '18:30', '20:45', '22:10'],
                 showTimesTomorrow: ['00:05', '02:30', '04:55', '07:20', '09:45', '11:10', '13:35', '16:00', '18:25', '20:50', '23:15'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+
+
+
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:55', '06:10', '12:15', '18:30'],
+                    showTimesTomorrowArea: ['00:05', '07:20', '13:35', '20:50'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:20', '08:25', '14:40', '20:45'],
+                    showTimesTomorrowArea: ['02:30', '09:45', '16:00', '23:15'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['03:45', '10:50', '16:05', '22:10'],
+                    showTimesTomorrowArea: ['04:55', '11:10', '18:25'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1015,7 +1075,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Avatar.jpg',
                 showTimesToDay: ['00:20', '02:45', '04:10', '06:35', '08:50', '10:15', '11:40', '14:05', '15:20', '17:35', '19:50', '21:05'],
                 showTimesTomorrow: ['00:35', '02:00', '04:25', '06:50', '09:15', '11:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
-                showTimesAfterTomorrow: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10']
+                showTimesAfterTomorrow: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:20', '06:35', '11:40', '17:35'],
+                    showTimesTomorrowArea: ['00:35', '06:50', '13:05', '20:20'],
+                    showTimesAfterTomorrowArea: ['01:25', '08:40', '15:55', '23:10']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:45', '08:50', '14:05', '19:50'],
+                    showTimesTomorrowArea: ['02:00', '09:15', '15:30', '22:45'],
+                    showTimesAfterTomorrowArea: ['03:50', '11:05', '18:20', '20:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['04:10', '10:15', '15:20', '21:05'],
+                    showTimesTomorrowArea: ['04:25', '11:40', '17:55', '23:00'],
+                    showTimesAfterTomorrowArea: ['06:15', '13:30', '20:45', '23:10']
+                }
             },
 
             {
@@ -1035,7 +1113,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Nhà Vịt Di Cư.jpg',
                 showTimesToDay: ['00:45', '02:10', '03:35', '06:00', '08:15', '10:40', '12:05', '14:30', '16:55', '19:10', '21:35', '23:50'],
                 showTimesTomorrow: ['00:30', '02:55', '05:20', '07:45', '10:10', '12:35', '15:00', '17:25', '19:50', '22:15'],
-                showTimesAfterTomorrow: ['01:50', '04:15', '06:40', '09:05', '11:30', '13:55', '16:20', '18:45', '21:10', '23:35']
+                showTimesAfterTomorrow: ['01:50', '04:15', '06:40', '09:05', '11:30', '13:55', '16:20', '18:45', '21:10', '23:35'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:45', '06:00', '12:05', '19:10'],
+                    showTimesAfterTomorrowArea: ['01:40', '08:55', '16:10', '22:15'],
+                    showTimesAfterTomorrowArea: ['01:50', '09:05', '16:20', '23:35']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:10', '08:15', '14:30', '21:35'],
+                    showTimesTomorrowArea: ['02:55', '10:10', '17:25'],
+                    showTimesAfterTomorrowArea: ['04:15', '11:30', '18:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['03:35', '10:40', '16:55', '23:50'],
+                    showTimesTomorrowArea: ['05:20', '12:35', '19:50'],
+                    showTimesAfterTomorrowArea: ['06:40', '13:55', '21:10']
+                }
             },
 
             {
@@ -1055,7 +1151,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Aquaman Và Vương Quốc Thất Lạc.jpg',
                 showTimesToDay: ['00:05', '02:30', '04:55', '07:20', '09:45', '12:10', '14:35', '17:00', '19:25', '21:50'],
                 showTimesTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '22:00'],
-                showTimesAfterTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25']
+                showTimesAfterTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:05', '07:20', '14:35', '21:50'],
+                    showTimesTomorrowArea: ['01:15', '08:30', '15:45', '22:00'],
+                    showTimesAfterTomorrowArea: ['01:40', '08:55', '16:10', '23:25']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:30', '09:45', '17:00'],
+                    showTimesTomorrowArea: ['03:40', '10:55', '18:10'],
+                    showTimesAfterTomorrowArea: ['04:05', '11:20', '18:35']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['04:55', '12:10', '19:25'],
+                    showTimesTomorrowArea: ['06:05', '13:20', '20:35'],
+                    showTimesAfterTomorrowArea: ['06:30', '13:45', '21:00']
+                }
             },
 
             {
@@ -1095,7 +1209,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Oppenheimer.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -1115,7 +1247,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Katak Và Sứ Mệnh Đại Dương.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35']
+                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['02:15', '09:30', '16:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['04:40', '11:55', '19:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['07:05', '14:20', '21:35']
+                }
             },
 
             {
@@ -1135,7 +1285,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Đại Hải Chiến Noryang - Biển Chết.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
 
             {
@@ -1153,9 +1321,27 @@ var infomationMovie = [
                 content: 'Nhân vật chính trong Rượu Cốt Người là Trương Tử Kiệt (Lư Hãn Đình), một chàng trai quyết định tham gia tour du lịch trên đảo hoang cùng bạn bè để quên đi nỗi đau trước cái chết đột ngột của bạn gái Ava (Viên Lễ Lâm). Nhưng chuyến hành trình về miền hoang dã lại không vui như kì vọng. Bốn người bạn bắt đầu gặp thấy những điều kì lạ, rồi những sự kiện siêu nhiên đáng sợ lần lượt xảy ra. Không lâu sau, họ phát hiện sự tồn tại của một thế lực tà ác cổ xưa và nó đang rình rập, theo dõi họ mọi lúc mọi nơi. Chuyến đi tưởng chừng rất vui vẻ lại trở thành nỗi kinh hoàng chết chóc. Phim mới Rượu Cốt Người dự kiến ra mắt tại các rạp chiếu phim toàn quốc từ 19.01.2024',
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Is_Showing/Rượu cốt người.webp',
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Rượu cốt người.jpg',
-                showTimesToDay: ['00:20', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
+                showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40','21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -1197,7 +1383,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Vòng Vây Cá Mập.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -1217,7 +1421,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trốn Tìm Với Quỷ.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
 
             {
@@ -1237,7 +1459,26 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trú Quỷ.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
+
             },
 
             {
@@ -1257,7 +1498,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Oppenheimer.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1277,7 +1536,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Marsupilami.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
 
             {
@@ -1297,7 +1574,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Hành Tinh Cát.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
 
             {
@@ -1317,7 +1612,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Đấu Trường Muôn Thú.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -1337,7 +1650,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Gia Đình X Điệp Viên.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
 
             {
@@ -1357,7 +1688,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Mai.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -1377,7 +1726,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Sáng Đèn.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1397,7 +1764,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trà.webp',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
             {
                 id: 'A12',
@@ -1416,7 +1801,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Lễ Trừ Tà.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1436,7 +1839,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Cún Cưng Đại Náo Nhà Hát.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             },
             {
                 id: 'A14',
@@ -1455,7 +1876,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Bơi Đêm.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
             {
                 id: 'A15',
@@ -1475,6 +1914,24 @@ var infomationMovie = [
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
                 showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
             }
         ]
     },
@@ -1499,7 +1956,29 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Mật Vụ Ong.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '21:30', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '21:30'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40', '23:05'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                },
+
 
             },
             {
@@ -1519,7 +1998,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Quỷ cẩu.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -1540,7 +2037,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Kinh Cầu Ma.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
 
@@ -1562,6 +2079,26 @@ var infomationMovie = [
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
                 showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -1582,7 +2119,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Avatar.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -1602,7 +2159,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Nhà Vịt Di Cư.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
 
             {
@@ -1622,7 +2199,28 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Aquaman Và Vương Quốc Thất Lạc.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
+
 
             },
 
@@ -1643,7 +2241,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Đa Chiều Hỗn Chiến.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
 
@@ -1665,6 +2283,26 @@ var infomationMovie = [
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
                 showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -1685,7 +2323,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Katak Và Sứ Mệnh Đại Dương.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20', '22:10']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
 
             },
 
@@ -1706,7 +2364,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Đại Hải Chiến Noryang - Biển Chết.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
 
             {
@@ -1726,7 +2404,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Rượu cốt người.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -1746,7 +2444,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Trên Bàn Nhậu Dưới Bàn Mưu.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
 
             },
         ],
@@ -1768,7 +2486,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Vòng Vây Cá Mập.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20', '22:10']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -1788,7 +2524,26 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trốn Tìm Với Quỷ.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
+
             },
 
             {
@@ -1808,7 +2563,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trú Quỷ.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -1828,7 +2601,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Oppenheimer.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1848,7 +2639,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Marsupilami.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -1868,7 +2677,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Hành Tinh Cát.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
 
             },
 
@@ -1889,7 +2716,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Đấu Trường Muôn Thú.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -1910,7 +2755,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Gia Đình X Điệp Viên.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
 
             },
 
@@ -1931,7 +2794,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Mai.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
 
             },
 
@@ -1952,7 +2833,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Sáng Đèn.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -1973,7 +2872,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trà.webp',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
             {
@@ -1993,7 +2910,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Lễ Trừ Tà.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
 
             },
 
@@ -2013,8 +2948,26 @@ var infomationMovie = [
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Cún cưng đại náo nhà hát.webp',
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Cún Cưng Đại Náo Nhà Hát.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
-                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55', '00:20'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '22:20'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
             {
@@ -2034,8 +2987,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Bơi Đêm.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
-
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
             {
                 id: 'A15',
@@ -2051,15 +3021,32 @@ var infomationMovie = [
                 actor: ['Aron Taylor-Johnson', 'ussell Crowe', 'riana DeBose', 'red Hechinger', 'hristopher Abbott'],
                 content: 'Bộ phim tập trung vào nhân vật thợ săn Kraven trong truyện tranh Marvel. Theo đó, Sergei Kravinoff (Aaron Taylor-Johnson thủ vai) cùng bố của anh đi săn ở Châu Phi. Bố của Sergei Kravinoff là một tay săn lão luyện. Khi Sergei bị một con sư tử tấn công, bố của anh cho rằng anh chỉ là một kẻ yếu đuối.',
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Thợ săn thủ lĩnh.webp',
-                imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Kraven - Thợ Săn Thủ Lĩnh.jpg',
+                imgPosterHorizontal: '../Assets/Image/Poster/Horizontal',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35']
-
+                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['02:15', '09:30', '16:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['04:40', '11:55', '19:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['07:05', '14:20', '21:35']
+                }
             }
         ]
     },
-    {
+	{
         city: 'TP Hà Nội',
         nameCinema: 'Movies Mipec Long Biên',
         detailsMovieIsShowing: [
@@ -2078,9 +3065,31 @@ var infomationMovie = [
                 content: 'Jason Statham vào vai Adam Clay, một người nuôi ong cần mẫn và đơn độc. Anh có mối quan hệ tốt với bà chủ nhà, thậm chí coi bà như người thân duy nhất của mình. Thế nhưng, một sự kiện xảy ra khiến bà qua đời, và “người nuôi ong” Adam Clay quyết định bắt đầu kế hoạch trả thù tàn bạo của mình. Trong khi Clay vạch trần bí mật đằng sau đường dây lừa đảo cỡ lớn và bắt những kẻ có tội phải trả giá, thân phận thật của anh cũng dần được hé lộ. Phim mới Mật Vụ Ong dự kiến ra mắt tại các rạp chiếu phim toàn quốc từ 12.01.2024.',
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Is_Showing/Mật Vụ Ong.webp',
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Mật Vụ Ong.jpg',
-                showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
+                showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '21:30', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '21:30'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40', '23:05'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                },
+
 
             },
             {
@@ -2100,7 +3109,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Quỷ cẩu.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -2121,7 +3148,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Kinh Cầu Ma.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
 
@@ -2143,6 +3190,26 @@ var infomationMovie = [
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
                 showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -2163,7 +3230,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Avatar.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -2183,7 +3270,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Nhà Vịt Di Cư.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
 
             {
@@ -2203,7 +3310,28 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Aquaman Và Vương Quốc Thất Lạc.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
+
 
             },
 
@@ -2224,7 +3352,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Đa Chiều Hỗn Chiến.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
 
@@ -2246,6 +3394,26 @@ var infomationMovie = [
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
                 showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -2266,7 +3434,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Katak Và Sứ Mệnh Đại Dương.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20', '22:10']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
 
             },
 
@@ -2287,7 +3475,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Đại Hải Chiến Noryang - Biển Chết.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
 
             {
@@ -2307,7 +3515,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Rượu cốt người.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -2327,7 +3555,27 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Is_Showing/Trên Bàn Nhậu Dưới Bàn Mưu.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
 
             },
         ],
@@ -2349,7 +3597,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Vòng Vây Cá Mập.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20', '22:10']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
             },
 
             {
@@ -2368,8 +3634,27 @@ var infomationMovie = [
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Trốn tìm với quỷ.webp',
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trốn Tìm Với Quỷ.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
-                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55', '00:20'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
+
             },
 
             {
@@ -2389,7 +3674,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trú Quỷ.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
             },
 
             {
@@ -2409,7 +3712,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Oppenheimer.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -2429,7 +3750,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Marsupilami.jpg',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
             },
 
             {
@@ -2449,7 +3788,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Hành Tinh Cát.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
 
             },
 
@@ -2469,8 +3826,26 @@ var infomationMovie = [
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Đấu trường muôn thú.webp',
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Đấu Trường Muôn Thú.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
-                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55', '00:20'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -2491,7 +3866,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Gia Đình X Điệp Viên.jpg',
                 showTimesToDay: ['02:00', '04:25', '06:50', '09:15', '11:40', '14:05', '16:30', '18:55', '21:20', '23:45'],
                 showTimesTomorrow: ['00:35', '03:00', '05:25', '07:50', '10:15', '12:40', '15:05', '17:30', '19:55', '22:20'],
-                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10']
+                showTimesAfterTomorrow: ['02:50', '05:15', '07:40', '10:05', '12:30', '14:55', '17:20', '19:45', '22:10'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['02:00', '09:15', '16:30', '23:45'],
+                    showTimesTomorrowArea: ['00:35', '07:50', '15:05', '22:20'],
+                    showTimesAfterTomorrowArea: ['02:50', '10:05', '17:20']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['04:25', '11:40', '18:55'],
+                    showTimesTomorrowArea: ['03:00', '10:15', '17:30'],
+                    showTimesAfterTomorrowArea: ['05:15', '12:30', '19:45']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:50', '14:05', '21:20'],
+                    showTimesTomorrowArea: ['05:25', '12:40', '19:55'],
+                    showTimesAfterTomorrowArea: ['07:40', '14:55', '22:10']
+                }
 
             },
 
@@ -2512,7 +3905,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Mai.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
 
             },
 
@@ -2533,7 +3944,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Sáng Đèn.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '21:55'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
 
@@ -2554,7 +3983,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Trà.webp',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00']
+                showTimesAfterTomorrow: ['01:15', '03:40', '06:05', '08:30', '10:55', '13:20', '15:45', '18:10', '20:35', '23:00'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['01:15', '08:30', '15:45', '23:00']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['03:40', '10:55', '18:10']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['06:05', '13:20', '20:35']
+                }
 
             },
             {
@@ -2574,7 +4021,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Lễ Trừ Tà.jpg',
                 showTimesToDay: ['00:15', '02:40', '05:05', '07:30', '09:55', '12:20', '14:45', '17:10', '19:35', '22:00'],
                 showTimesTomorrow: ['01:40', '04:05', '06:30', '08:55', '11:20', '13:45', '16:10', '18:35', '21:00', '23:25'],
-                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55']
+                showTimesAfterTomorrow: ['00:10', '02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:15', '07:30', '14:45', '22:00'],
+                    showTimesTomorrowArea: ['01:40', '08:55', '16:10', '23:25'],
+                    showTimesAfterTomorrowArea: ['00:10', '07:25', '14:40', '21:55']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['02:40', '09:55', '17:10'],
+                    showTimesTomorrowArea: ['04:05', '11:20', '18:35'],
+                    showTimesAfterTomorrowArea: ['02:35', '09:50', '17:05']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:05', '12:20', '19:35'],
+                    showTimesTomorrowArea: ['06:30', '13:45', '21:00'],
+                    showTimesAfterTomorrowArea: ['05:00', '12:15', '19:30']
+                }
 
             },
 
@@ -2595,7 +4060,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Cún Cưng Đại Náo Nhà Hát.jpg',
                 showTimesToDay: ['00:40', '03:05', '05:30', '07:55', '10:20', '12:45', '15:10', '17:35', '20:00', '22:25'],
                 showTimesTomorrow: ['02:35', '05:00', '07:25', '09:50', '12:15', '14:40', '17:05', '19:30', '21:55'],
-                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45']
+                showTimesAfterTomorrow: ['01:00', '03:25', '05:50', '08:15', '10:40', '13:05', '15:30', '17:55', '20:20', '22:45'],
+                area1: {
+                    nameArea: 'Rạp1',
+                    showTimesToDayArea: ['00:40', '07:55', '15:10', '22:25'],
+                    showTimesTomorrowArea: ['02:35', '09:50', '17:05', '21:55'],
+                    showTimesAfterTomorrowArea: ['01:00', '08:15', '15:30', '22:45']
+                },
+                area2: {
+                    nameArea: 'Rạp2',
+                    showTimesToDayArea: ['03:05', '10:20', '17:35'],
+                    showTimesTomorrowArea: ['05:00', '12:15', '19:30'],
+                    showTimesAfterTomorrowArea: ['03:25', '10:40', '17:55']
+                },
+                area3: {
+                    nameArea: 'Rạp3',
+                    showTimesToDayArea: ['05:30', '12:45', '20:00'],
+                    showTimesTomorrowArea: ['07:25', '14:40', '22:20'],
+                    showTimesAfterTomorrowArea: ['05:50', '13:05', '20:20']
+                }
 
             },
             {
@@ -2615,8 +4098,25 @@ var infomationMovie = [
                 imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Bơi Đêm.jpg',
                 showTimesToDay: ['01:20', '03:45', '06:10', '08:35', '11:00', '13:25', '15:50', '18:15', '20:40', '23:05'],
                 showTimesTomorrow: ['00:55', '03:20', '05:45', '08:10', '10:35', '13:00', '15:25', '17:50', '20:15', '22:40'],
-                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55']
-
+                showTimesAfterTomorrow: ['01:10', '03:35', '06:00', '08:25', '10:50', '13:15', '15:40', '18:05', '20:30', '22:55'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:20', '08:35', '15:50', '23:05'],
+                    showTimesTomorrowArea: ['00:55', '08:10', '15:25', '22:40'],
+                    showTimesAfterTomorrowArea: ['01:10', '08:25', '15:40', '22:55']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:45', '11:00', '18:15'],
+                    showTimesTomorrowArea: ['03:20', '10:35', '17:50'],
+                    showTimesAfterTomorrowArea: ['03:35', '10:50', '18:05']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:10', '13:25', '20:40'],
+                    showTimesTomorrowArea: ['05:45', '13:00', '20:15'],
+                    showTimesAfterTomorrowArea: ['06:00', '13:15', '20:30']
+                }
             },
             {
                 id: 'A15',
@@ -2632,14 +4132,31 @@ var infomationMovie = [
                 actor: ['Aron Taylor-Johnson', 'ussell Crowe', 'riana DeBose', 'red Hechinger', 'hristopher Abbott'],
                 content: 'Bộ phim tập trung vào nhân vật thợ săn Kraven trong truyện tranh Marvel. Theo đó, Sergei Kravinoff (Aaron Taylor-Johnson thủ vai) cùng bố của anh đi săn ở Châu Phi. Bố của Sergei Kravinoff là một tay săn lão luyện. Khi Sergei bị một con sư tử tấn công, bố của anh cho rằng anh chỉ là một kẻ yếu đuối.',
                 imgPosterVertical: '../Assets/Image/Poster/Vertical/Movie_Coming_Soon/Thợ săn thủ lĩnh.webp',
-                imgPosterHorizontal: '../Assets/Image/Poster/Horizontal/Movie_Coming_Soon/Kraven - Thợ Săn Thủ Lĩnh.jpg',
+                imgPosterHorizontal: '../Assets/Image/Poster/Horizontal',
                 showTimesToDay: ['01:25', '03:50', '06:15', '08:40', '11:05', '13:30', '15:55', '18:20', '20:45', '23:10'],
                 showTimesTomorrow: ['00:50', '03:15', '05:40', '08:05', '10:30', '12:55', '15:20', '17:45', '20:10', '22:35'],
-                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35']
-
+                showTimesAfterTomorrow: ['02:15', '04:40', '07:05', '09:30', '11:55', '14:20', '16:45', '19:10', '21:35'],
+                area1: {
+                    nameArea: 'Rạp 1',
+                    showTimesToDayArea: ['01:25', '08:40', '15:55', '23:10'],
+                    showTimesTomorrowArea: ['00:50', '08:05', '15:20', '22:35'],
+                    showTimesAfterTomorrowArea: ['02:15', '09:30', '16:45']
+                },
+                area2: {
+                    nameArea: 'Rạp 2',
+                    showTimesToDayArea: ['03:50', '11:05', '18:20'],
+                    showTimesTomorrowArea: ['03:15', '10:30', '17:45'],
+                    showTimesAfterTomorrowArea: ['04:40', '11:55', '19:10']
+                },
+                area3: {
+                    nameArea: 'Rạp 3',
+                    showTimesToDayArea: ['06:15', '13:30', '20:45'],
+                    showTimesTomorrowArea: ['05:40', '12:55', '20:10'],
+                    showTimesAfterTomorrowArea: ['07:05', '14:20', '21:35']
+                }
             }
         ]
-    },
+    }
 ];
 
 //-------------------------------- Dữ liệu Tên thành phố và tên rap

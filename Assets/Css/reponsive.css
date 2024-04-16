@@ -22,21 +22,25 @@
 
     /* Hiệu ứng scroll */
     .left-to-right {
-        transform: translateX(-200%);
+        transform: translateX(-20%);
+        opacity: 0;
         transition: 1s linear;
     }
 
     .left-to-right.start {
         transform: translateX(0);
+        opacity: 1;
     }
 
     .right-to-left {
-        transform: translateX(1500px);
+        transform: translateX(20%);
+        opacity: 0;
         transition: 1s linear;
     }
 
     .right-to-left.start {
         transform: translateX(0);
+        opacity: 1;
     }
 
     .zoom {
@@ -133,10 +137,16 @@
     }
 
     /* Search */
+    .header__right__search {
+        position: static;
+    }
+
     .header__right__search--input {
-        top: 1rem;
-        left: 0;
-        transform: translate(-37.5%, -10%) scale(0.6);
+        height: 6rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%) scale(0.6);
     }
 
     /* slider header */
@@ -300,7 +310,7 @@
     }
 
     .cinema__box2 select {
-        width: 17rem;
+        width: 15rem;
     }
 
     .movie--day__detail {
@@ -406,5 +416,113 @@
 
     .info--movie__detail__time--specifically__box__info {
         justify-content: center;
+    }
+
+    /* Trang mua đăt ghế*/
+    #step--buy {
+        font-size: 1.3rem;
+        margin-top: 9rem;
+    }
+
+    #container__buy {
+        flex-direction: column-reverse;
+    }
+
+    .container__chairs--mobile {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .container__buy--box1__select--chair>ul {
+        white-space: nowrap;
+    }
+
+    .container__buy--box1__select--chair {
+        width: 100%;
+    }
+
+    .container__buy--box2,
+    .container__buy--box1 {
+        width: 100% !important;
+    }
+
+    .container__buy--box1__select--chair ul {
+        width: 90rem;
+    }
+
+    .container__buy--box1__change--time div:first-child {
+        width: 35% !important;
+    }
+
+    .container__buy--box1__footer {
+        margin-top: 5rem;
+    }
+
+    .container__buy--box1__footer h1 {
+        color: var(--white-color);
+        text-align: center;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -250%);
+    }
+
+    .container__buy--box1__footer--note>div {
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        flex-direction: column;
+
+    }
+
+    .container__buy--box1__footer--note div {
+        align-items: start;
+    }
+
+    .message__chair--card {
+        position: relative;
+        width: 35rem;
+        height: 35rem;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .message__chair--card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        left: -5px;
+        margin: auto;
+        width: 36rem;
+        height: 36rem;
+        border-radius: 10px;
+        background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+        z-index: -10;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* btn thanh toán và giá tiền */
+    .container__buy--box2__info--chair {
+        border: none;
+    }
+    .box--price--btn {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        box-shadow: 0 0 10px var(--white-color);
+        padding: 0 1rem 2rem 1rem;
+        background-color: var(--bluePurple-color);
+    }
+    #footer {
+        margin-bottom: 14rem;
     }
 }

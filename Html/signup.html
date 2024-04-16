@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Libraly/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../Libraly/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Libraly/JQuery/jquery-3.7.1.min.js"></script>
+    <title>Movies</title>
+    <link rel="Icon" href="../Assets/Image/Logo/logo.png">
+</head>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .full__screen__background {
+        background-image: url(../Assets/Image/Login/1.jpg);
+        width: 100%;
+        height: 100vh;
+    }
+
+    .form__background {
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        padding: 10px 50px;
+        width: 800px !important;
+        transform: scale(0.8);
+    }
+
+    .over--lay__register {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .logo-login {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-login img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media only screen and (max-width: 740px) {
+        .form__background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.5);
+            width: 500px !important;
+
+        }
+    }
+</style>
+
+
+<body>
+    <div class="over--lay__register"></div>
+
+    <div class="logo-login">
+        <img src="../Assets/Image/Logo/logo.png" alt="">
+    </div>
+
+
+
+    <div class="container-fluid full__screen__background">
+        <form action="">
+            <div class="m-auto mt-4 border rounded-5 form__background text-white" style="width: 30%;">
+                <!-- Phần header -->
+                <img src="../Assets/Image/Logo/logo_dangki.svg" alt="" class="d-block mx-auto">
+                <p class="mb-3">
+                <h2 class="text-center">Đăng kí tài khoản</h2>
+                </p>
+                <!-- Phần Body -->
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="name" class="form-label">Họ và tên</label></div>
+                    <div class="col"><input type="text" class="form-control" id="hoTen" name="hoTen"
+                            placeholder="Nguyen Van A"><span class="text-danger" id="ErrName">(*)</span></div>
+
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="email" class="form-label">Email</label></div>
+                    <div class="col"><input type="email" class="form-control" id="email" name="email"
+                            placeholder="duc@123.com"><span class="text-danger" id="ErrEmail">(*)</span></div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="phone" class="form-label">Số điện thoại</label></div>
+                    <div class="col"><input type="text" class="form-control" id="dienThoai" name="dienThoai"
+                            placeholder="0912345678"><span class="text-danger" id="ErrPhone">(*)</span></div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="gioiTinh" class="form-label">Giới tính</label></div>
+                    <div class="col">
+                        <input type="radio" class="" id="Nam" name="gioiTinh">Nam
+                        <input type="radio" class="ms-3" id="Nu" name="gioiTinh">Nữ
+                        <br>
+                        <span class="text-danger" id="ErrGender">(*)</span>
+                    </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="dayofbirth" class="form-label">Ngày sinh</label></div>
+                    <div class="col"><input type="date" class="form-control" id="ngaySinh" name="ngaySinh"
+                            placeholder="04/14/2000"><span class="text-danger" id="ErrDate">(*)</span></div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="password" class="form-label">Mật khẩu</label></div>
+                    <div class="col"><input type="password" class="form-control" id="matKhau" name="matKhau"><span
+                            class="text-danger" id="ErrPass">(*)</span></div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="repassword" class="form-label">Nhập lại mật khẩu</label></div>
+                    <div class="col"><input type="password" class="form-control" id="nhapLaimatKhau"
+                            name="nhapLaimatKhau"><span class="text-danger" id="ErrRePass">(*)</span></div>
+                </div>
+
+                <div class="row my-3">
+                    <button type="button" class="btn btn-success p-2" id="btnDangki">Đăng kí</button>
+                </div>
+                <!-- Phần footer -->
+                <p class="my-4">
+                <h6 class="text-center">
+                    Đã có tài khoản? <a href="../Html/login.html">Đăng nhập</a>
+                </h6>
+                </p>
+                <p class="mt-4 text-center">
+                    <a class="d-block mx-auto" href="../Html/index.html"> &#8701; Quay về trang chủ</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#myModal").on("shown.bs.modal", function () {
+            $("#hoTen").focus();
+        })
+
+        $("#hoTen").keyup(function () {
+            validHoten();
+        })
+
+        function validHoten() {
+            var hoTen = $("#hoTen").val();
+            if (hoTen == "" || hoTen == null)
+                $("#ErrName").text("Họ tên không được rỗng");
+            else if (!/^[A-Z]/.test(hoTen))
+                $("#ErrName").text("Chữ cái đầu tiên phải viết hoa");
+            else if (!/[a-z]+/.test(hoTen))
+                $("#ErrName").text("Chữ cái sau viết thường");
+            else if (!/( [A-Z][a-z]+)+$/.test(hoTen))
+                $("#ErrName").text("Tên phải có 2 từ trở lên và không kết thúc bởi dấu cách!");
+            else {
+                $("#ErrName").text("");
+                return true
+            }
+        }
+        $("#email").keyup(function () {
+            validEmail();
+        })
+
+        function validEmail() {
+            var email = $("#email").val();
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+                $("#ErrEmail").text("Email cần có định dạng name@domain.com");
+            else {
+                $("#ErrEmail").text("");
+                return true
+            }
+        }
+
+        $("#dienThoai").keyup(function () {
+            validPhone();
+        })
+
+        function validPhone() {
+            var phone = $("#dienThoai").val();
+            if (!/^(?:09|02|08)/.test(phone))
+                $("#ErrPhone").text("Phải bắt đầu bằng 09 hoặc 08 hoặc 02");
+            else if (!/^[0-9]{10}$/.test(phone))
+                $("#ErrPhone").text("Số điện thoại gồm 10 số");
+            else {
+                $("#ErrPhone").text("");
+                return true
+            }
+        }
+        $("input[name='gioiTinh']").change(function () {
+            validGender();
+        })
+
+        function validGender() {
+            if ($("input[name='gioiTinh']:checked").length > 0) {
+                $("#ErrGender").text("");
+                return true;
+            } else $("#ErrGender").text("Chọn giới tính");
+
+        }
+
+
+        $("#ngaySinh").change(function () {
+            validNgaySinh();
+        })
+
+        function validNgaySinh() {
+            var namHienTai = new Date().getFullYear();
+            var namDuocLay = new Date($("#ngaySinh").val()).getFullYear();
+            if (namHienTai - namDuocLay < 18)
+                $("#ErrDate").text("Phải trên 18 tuổi");
+            else if ($("#ngaySinh").val() === "")
+                $("#ErrDate").text("Hãy nhập ngày sinh");
+            else {
+                $("#ErrDate").text("");
+                return true
+            }
+        }
+        $("#matKhau").keyup(function () {
+            validPassWord();
+        })
+
+        function validPassWord() {
+            var mk = $("#matKhau").val();
+            if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(mk))
+                $("#ErrPass").text("Tối thiểu 8 kí tự bao gồm chữ và số");
+            else {
+                $("#ErrPass").text("");
+                return true
+            }
+        }
+
+        $("#nhapLaimatKhau").keyup(function () {
+            validRePassWord();
+        })
+
+        function validRePassWord() {
+            var nlmk = $("#nhapLaimatKhau").val();
+            var mk = $("#matKhau").val();
+            if (nlmk != mk || nlmk === "")
+                $("#ErrRePass").text("Không đúng mật khẩu");
+            else {
+                $("#ErrRePass").text("");
+                return true
+            }
+        }
+
+        $("#btnDangki").click(function () {
+            if (!validHoten()) {
+                $("#hoTen").focus();
+            } else if (!validEmail()) {
+                $("#email").focus();
+            } else if (!validPhone()) {
+                $("#dienThoai").focus();
+            } else if (!validGender()) {
+                $("input[name='gioiTinh']").focus();
+            } else if (!validNgaySinh()) {
+                $("#ngaySinh").focus();
+            } else if (!validPassWord()) {
+                $("#matKhau").focus();
+            } else if (!validRePassWord()) {
+                $("#nhapLaimatKhau").focus();
+            } else {
+                alert("Tao thanh cong");
+            }
+        })
+    })
+</script>
+
+</html>

@@ -4,198 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Libraly/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../Libraly/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Libraly/JQuery/jquery-3.7.1.min.js"></script>
     <title>Movies</title>
     <link rel="Icon" href="../Assets/Image/Logo/logo.png">
-    <link rel="stylesheet" href="../Assets/Icon/fontawesome-free-6.4.2-web/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="../Assets/Css/main.css">
-    <link rel="stylesheet" href="../Assets/Css/reponsive.css">
 </head>
 
+<style>
+    .full__screen__background {
+        background-image: url(../Assets/Image/Login/1.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .form__background {
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px !important;
+
+    }
+
+    .over--lay__login {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .7);
+        z-index: 0 !important;
+    }
+
+    .logo-login {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-login img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media only screen and (max-width: 740px) {
+        .form__background {
+            transform: translate(-50%, -50%) scale(0.6);
+
+        }
+    }
+</style>
+
+
 <body>
-    <div class="background__animation"></div>
-    <div class="cursor"></div>
-    <div id="next--page">
-        <div>
-            <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-                <div class="wheel"></div>
-                <div class="hamster">
-                    <div class="hamster__body">
-                        <div class="hamster__head">
-                            <div class="hamster__ear"></div>
-                            <div class="hamster__eye"></div>
-                            <div class="hamster__nose"></div>
-                        </div>
-                        <div class="hamster__limb hamster__limb--fr"></div>
-                        <div class="hamster__limb hamster__limb--fl"></div>
-                        <div class="hamster__limb hamster__limb--br"></div>
-                        <div class="hamster__limb hamster__limb--bl"></div>
-                        <div class="hamster__tail"></div>
-                    </div>
-                </div>
-                <div class="spoke"></div>
-            </div>
-            <h1>Chờ mình xíu . . .</h1>
-        </div>
+    <div class="over--lay__login"></div>
+
+    <div class="logo-login">
+        <img src="../Assets/Image/Logo/logo.png" alt="">
     </div>
-    <header id="header">
-        <div class="header__left">
-            <img src="../Assets/Image/Logo/logo.png" alt="">
-        </div>
-        <div class="header__center">
-            <div class="header__center__home">
-                <a href="../Html/index.html">Trang chủ</a>
-            </div>
-            <div class="header__center__movie">
-                <a href="../Html/movies.html">Phim</a>
-            </div>
-            <div class="header__center__event">
-                <a href="../Html/event.html">Sự Kiện</a>
-            </div>
-            <div class="header__center__cinema--price">
-                <a href="../Html/cinema__price.html">Rạp & Giá Vé</a>
-            </div>
-        </div>
-        <div class="header__right">
-            <div class="header__right__search">
-                <div class="header__right__search--input">
-                    <div>
-                        <input type="text" placeholder="Enter the name movie">
-                        <div class="header__right__search--list">
-                            <ul class="todos__search"></ul>
-                            <div class="header__right__search--list__movies hide"></div>
-                        </div>
-                    </div>
 
+    <div class="container-fluid full__screen__background">
+        <form action="">
+            <div class="m-auto mt-4 p-5 border rounded-5 form__background text-white" style="width: 30%;">
+                <!-- Phần header -->
+                <img src="../Assets/Image/Logo/logo_dangki.svg" alt="" class="d-block mx-auto">
+                <p class="mb-3">
+                <h2 class="text-center">Đăng nhập</h2>
+                </p>
+                <!-- Phần Body -->
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="email" class="form-label">Email</label></div>
+                    <div class="col"><input type="email" class="form-control" id="email" name="email"
+                            placeholder="duc@123.com"><span class="text-danger" id="ErrEmail"></span></div>
                 </div>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="header__right__user">
-                <i class="fa-regular fa-user"></i>
-            </div>
-            <div class="header__right__control--light">
-                <div id="wrapper-btn">
-                    <input type="checkbox" name="checkbox" class="switch-btn">
-                </div>
-            </div>
-            <div class="header__menu--mobile">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </div>
-        </div>
-        <div class="header__center__mobile--close">
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="overlay"></div>
-    </header>
 
-    <div id="login">
-        <form action="" id="form__login">
-            <h1>Đăng Nhập</h1>
-
-            <div class="form__login__group">
-                <input type="text" placeholder="Email">
-                <div class="form__login__group--message"></div>
-            </div>
-            <div class="form__login__group">
-                <input type="text" placeholder="Mật khẩu">
-                <div class="form__login__group--message"></div>
-            </div>
-
-            <button>Đăng nhập</button>
-
-            <div class="form__login__support">
-                <div class="form__login__support--memorize">
-                    <input type="checkbox" id="checkbox__login">
-                    <label for="checkbox__login">Ghi nhớ tôi</label>
+                <div class="row my-3">
+                    <div class="col-sm-4"><label for="password" class="form-label">Mật khẩu</label></div>
+                    <div class="col"><input type="password" class="form-control" id="matKhau" name="matKhau"><span
+                            class="text-danger" id="ErrPass"></span></div>
                 </div>
-                <div class="form__login__support--help">
-                    <p>Bạn cần trợ giúp?</p>
+                <div class="row my-3 justify-content-between">
+                    <div class="col-sm-4"><input type="checkbox" id="rememberAccount">Ghi nhớ tài khoản</div>
+                    <div class="col-auto"><a href="">Quên mật khẩu</a></div>
                 </div>
-            </div>
-
-            <div class="form__login__info">
-                <div class="form__login__info--register">
-                    <p>Bạn mới tham gia Movies?</p>
-                    <p>Đăng ký ngay</p>
+                <div class="row my-3">
+                    <button type="button" class="btn btn-success p-2" id="btnDangNhap">Đăng Nhập</button>
                 </div>
-                <div class="form__login__info--details">
-                    <p>Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot. <span>Tìm hiểu
-                            thêm.</span></p>
-                </div>
+                <!-- Phần footer -->
+                <p class="my-4">
+                <h3 class="text-center">
+                    Chưa có tài khoản? <a href="../Html/signup.html">Đăng kí</a>
+                </h3>
+                </p>
+                <p class="mt-4 text-center">
+                    <a class="d-block mx-auto" href="../Html/index.html"> &#8701; Quay về trang chủ</a>
+                </p>
             </div>
 
         </form>
-        <div class="overlay__login"></div>
     </div>
 
-    <footer id="footer">
-        <div class="footer__detail padding__screen margin__top">
-            <div class="footer__detail__introduce">
-                <h3>Giới thiệu</h3>
-                <ul>
-                    <li>Về chúng tôi</li>
-                    <li>Thỏa thuận sử dụng</li>
-                    <li>Quy chế hoạt động</li>
-                    <li>Chính sách bảo mật</li>
-                </ul>
-
-            </div>
-            <div class="footer__detail__film--angle">
-                <h3>Góc điện ảnh</h3>
-                <ul>
-                    <li>Thể loại phim</li>
-                    <li>Bình luận phim</li>
-                    <li>Blog điện ảnh</li>
-                    <li>Phim hay thắng</li>
-                </ul>
-
-            </div>
-            <div class="footer__detail__support">
-                <h3>Hỗ trợ</h3>
-                <ul>
-                    <li>Góp ý</li>
-                    <li>Sale & Services</li>
-                    <li>Rạp & Giá vé</li>
-                    <li>Tuyển dụng</li>
-                </ul>
-
-            </div>
-            <div class="footer__detail__logo">
-                <div class="footer__detail__logo--main">
-                    <img src="../Assets/Image/Logo/logo.png" alt="">
-                </div>
-                <div class="footer__detail__logo--tooltip">
-                    <div class="footer__tooltip facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <span class="tooltip__name">Facebook</span>
-                    </div>
-                    <div class="footer__tooltip github">
-                        <i class="fa-brands fa-github"></i>
-                        <span class="tooltip__name">Github</span>
-                    </div>
-                    <div class="footer__tooltip instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span class="tooltip__name">Instagram</span>
-                    </div>
-                    <div class="footer__tooltip youtube">
-                        <i class="fa-brands fa-youtube"></i>
-                        <span class="tooltip__name">Youtube</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__adress padding__screen">
-            <h2>CÔNG TY CỔ PHẦN PHIM MOVIES</h2>
-            <p>Toà nhà Bitexco Nam Long, 63A Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
-            <p>
-                <i class="fa-solid fa-mobile"></i> : <span>0353707544</span> -
-                <i class="fa-solid fa-phone"></i> : <span>1900 6789</span> -
-                <i class="fa-solid fa-envelope"></i> : <span>daongocanh25042004@gmail.com</span>
-            </p>
-        </div>
-    </footer>
-    <script src="../Js/common_properties.js"></script>
-    <script src="../Js/mobile.js"></script>
 </body>
+
+<script>
+    $(document).ready(function () {
+
+        $("#email").keyup(function () {
+            validEmail();
+        })
+
+        function validEmail() {
+            var email = $("#email").val();
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+                $("#ErrEmail").text("Email cần có định dạng name@domain.com");
+            else {
+                $("#ErrEmail").text("");
+                return true
+            }
+        }
+
+        $("#matKhau").keyup(function () {
+            validRePassWord();
+        })
+
+        function validPassWord() {
+            var mk = $("#matKhau").val();
+            if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(mk))
+                $("#ErrPass").text("Tối thiểu 8 kí tự bao gồm chữ và số");
+            else {
+                $("#ErrPass").text("");
+                return true
+            }
+        }
+
+
+
+
+        $("#btnDangNhap").click(function () {
+
+        })
+    })
+</script>
 
 </html>
