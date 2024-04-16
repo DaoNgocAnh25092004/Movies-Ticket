@@ -273,19 +273,21 @@ function saveDataSearch() {
 function initDataSearch() {
     let data = JSON.parse(localStorage.getItem('dataSearch'));
 
-    //Xử lý thêm hiệu ứng khi không có dữ liệu
-    if (data.length == 0) {
-        loaderData.classList.remove('hide')
-    }
-    if (data.length > 0) {
-        loaderData.classList.add('hide')
-    }
+    // Kiểm tra xem data có tồn tại không
     if (data) {
+        //Xử lý thêm hiệu ứng khi không có dữ liệu
+        if (data.length == 0) { // Thay đổi điều kiện kiểm tra từ null sang 0
+            loaderData.classList.remove('hide')
+        }
+        if (data.length > 0) {
+            loaderData.classList.add('hide')
+        }
         data.forEach(dataItem => {
             addDataElement(dataItem)
-        })
+        });
     }
 }
+
 //Gọi hàm khởi tạo lịch sử trình duyệt
 initDataSearch();
 
