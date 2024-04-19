@@ -17,7 +17,7 @@ const cityMovie = document.querySelector('.container__buy--box2__info--name div:
 const nameCinema = document.querySelector('.container__buy--box2__info--name div:nth-child(3) p:first-child')
 const nameRapText = document.querySelector('.container__buy--box2__info--name div:nth-child(3) p:last-child')
 const boxTime2 = document.querySelector('.container__buy--box2__info--name div:nth-child(4) div:first-child p:last-child')
-const dayBuy =  document.querySelector('.container__buy--box2__info--name div:nth-child(4) div:last-child')
+const dayBuy = document.querySelector('.container__buy--box2__info--name div:nth-child(4) div:last-child')
 
 
 boxTime1.innerHTML = boxInnerHTML
@@ -289,10 +289,281 @@ allChair.forEach(allChair => {
 
         textTotalPrice.innerHTML = formattedNumber;
     })
-}) 
+})
 
-// Chỉnh footer trên mobile
 
-const footer = document.getElementById('footer');
-if (window.innerWidth < 740) {
+// -------------------------------- Chuyển sang chọn thức ăn
+const btnContinue = document.querySelector('.btn__continue--ticket');
+const titleBuyFood = document.querySelector('#step--buy div:nth-child(2)');
+const titleBuyChair = document.querySelector('#step--buy div:nth-child(1)');
+const boxFood = document.querySelector('.container__buy--box1 > div:nth-child(2)')
+const boxChair = document.querySelector('.container__buy--box1 > div:first-child')
+const boxInfoFoodSelected = document.querySelector('.container__buy--box2__info--food')
+const txtMessageErr = document.querySelector('.message__chair--card p')
+
+let clickCount = 0; //Biến đếm số lượng lần click
+
+btnContinue.addEventListener('click', () => {
+    clickCount++;
+
+    switch (clickCount) {
+        case 1:
+            //Cập nhật vị trí quy trình thanh toán và hiển thị thức ăn
+            IndexPage(titleBuyChair, titleBuyFood);
+            checkSelectedChair();
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            break;
+    }
+});
+
+//Hàm kiểm tra xem chọn ghế chưa
+function checkSelectedChair() {
+    console.log(textTotalPrice.innerHTML.trim());
+    if (textTotalPrice.innerHTML.trim() == '0<span>₫</span>') {
+    txtMessageErr.innerHTML = 'Bạn chưa có chọn ghế!'
+    messageChair.classList.remove('hide')
+    overlayMessageChair.classList.remove('hide');
+    clickCount = 0;
+    return;
+} else {
+    //Điền lại thông tin lỗi
+    txtMessageErr.innerHTML = 'Việc chọn vị trí ghế của bạn không được để trống 1 ghế ở bên trái, giữa hoặc bên phải trên cùng hàng ghế mà bạn vừa chọn. Có thể chọn hai bên ghế đã bán.'
+    //Ân ghế
+    boxChair.classList.add('hide')
+    //Hiện thức ăn
+    boxFood.classList.remove('hide')
+}
+}
+
+
+//Hàm update dữ liệu thức ăn
+function updateHtmlFood() {
+    food.forEach(food => {
+        let formattedNumber = food.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+        let priceString = formattedNumber
+
+        boxFood.innerHTML +=
+            `
+        <div class="container__buy--box1__food">
+        <div class="container__buy--box1__food__img">
+            <img src="${food.imgFood}" alt="">
+        </div>
+        <div class="container__buy--box1__food__content">
+            <div class="container__buy--box1__food__content--name">
+                ${food.nameFood}
+            </div>
+
+            <div class="container__buy--box1__food__content--note">
+            ${food.noteFood}
+            </div>
+
+            <div class="container__buy--box1__food__content--price">
+                <p>Giá:</p>
+                <p>${priceString}</p>
+            </div>
+            <div class="container__buy--box1__food__content--btn">
+                <p><i class="fa-solid fa-minus"></i></p>
+                <p>0</p>
+                <p><i class="fa-solid fa-plus"></i></p>
+            </div>
+        </div>
+
+    </div>
+        `
+    })
+
+    quanityFood()
+}
+updateHtmlFood()
+// //Hàm thực hiện vị trí index của việc mua
+function IndexPage(htmlBefore, htmlCurrent) {
+    htmlCurrent.classList.add('step--buy__tick');
+    htmlCurrent.classList.remove('step--buy__unmarked');
+    htmlBefore.classList.add('step--buy__unmarked');
+}
+
+//Hàm thực hiện tăng số lượng food
+function quanityFood() {
+    const btnPlusFoods = document.querySelectorAll('.container__buy--box1__food__content--btn p:last-child');
+    const btnMinusFoods = document.querySelectorAll('.container__buy--box1__food__content--btn p:first-child');
+    const boxValueQuantityFoods = document.querySelectorAll('.container__buy--box1__food__content--btn p:nth-child(2)');
+    const nameFood = document.querySelectorAll('.container__buy--box1__food__content--name')
+    const priceFood = document.querySelectorAll('.container__buy--box1__food__content--price p:last-child')
+
+    btnPlusFoods.forEach((btnPlusFood, index) => {
+        let value = 0;
+        btnPlusFood.addEventListener('click', () => {
+            value++;
+            boxValueQuantityFoods[index].innerHTML = value;
+
+            //Bật info food 
+            boxInfoFoodSelected.classList.remove('hide')
+
+            //Điền số lượng thức ăn được chọn
+            checkNameQualityFood(nameFood[index].innerHTML.trim(), value)
+
+            //Tính tiền với mỗi sản phẩm
+            priceFoodElement(nameFood[index].innerHTML.trim(), value, priceFood[index].innerHTML.trim())
+
+            //Tính tổng tiền
+            totalPriceFoodAndChair()
+
+            checkNameShowFood(nameFood[index].innerHTML.trim())
+        });
+
+        btnMinusFoods[index].addEventListener('click', () => {
+            if (value > 0) {
+                value--;
+            }
+            //Nếu số lượng 0 thì ẩn đi
+            if (value === 0) {
+                checkNameHiddenFood(nameFood[index].innerHTML.trim())
+                boxInfoFoodSelected.classList.add('hide')
+
+            }
+            //Điền số lượng thức ăn được chọn
+            checkNameQualityFood(nameFood[index].innerHTML.trim(), value)
+
+            //Tính tiền với mỗi sản phẩm
+            priceFoodElement(nameFood[index].innerHTML.trim(), value, priceFood[index].innerHTML.trim())
+
+            //Tính tổng tiền
+            totalPriceFoodAndChair()
+
+            boxValueQuantityFoods[index].innerHTML = value;
+        });
+    });
+}
+
+const boxShowFood1 = document.querySelector('.container__buy--box2__info--food > div:first-child');
+const boxShowFood2 = document.querySelector('.container__buy--box2__info--food > div:nth-child(2)');
+const boxShowFood3 = document.querySelector('.container__buy--box2__info--food > div:nth-child(3)');
+const boxShowFood4 = document.querySelector('.container__buy--box2__info--food > div:nth-child(4)');
+const nameboxShowFood1 = boxShowFood1.querySelector('div:last-child > p:first-child');
+const nameboxShowFood2 = boxShowFood2.querySelector('div:last-child > p:first-child');
+const nameboxShowFood3 = boxShowFood3.querySelector('div:last-child > p:first-child');
+const nameboxShowFood4 = boxShowFood4.querySelector('div:last-child > p:first-child');
+const quanityFoodSelected1 = boxShowFood1.querySelector('div:first-child > p:last-child');
+const quanityFoodSelected2 = boxShowFood2.querySelector('div:first-child > p:last-child');
+const quanityFoodSelected3 = boxShowFood3.querySelector('div:first-child > p:last-child');
+const quanityFoodSelected4 = boxShowFood4.querySelector('div:first-child > p:last-child');
+const priceFoodSelected1 = boxShowFood1.querySelector('div:last-child > p:last-child');
+const priceFoodSelected2 = boxShowFood2.querySelector('div:last-child > p:last-child');
+const priceFoodSelected3 = boxShowFood3.querySelector('div:last-child > p:last-child');
+const priceFoodSelected4 = boxShowFood4.querySelector('div:last-child > p:last-child');
+const priceFoodSelected = document.querySelectorAll('.container__buy--box2__info--food > div > div:last-child > p:last-child')
+
+//Hàm  hiện các ô tính tiền
+function checkNameShowFood(name) {
+    if (name == nameboxShowFood1.innerHTML.trim()) {
+        boxShowFood1.classList.remove('hide')
+    }
+    if (name == nameboxShowFood2.innerHTML.trim()) {
+        boxShowFood2.classList.remove('hide')
+    }
+    if (name == nameboxShowFood3.innerHTML.trim()) {
+        boxShowFood3.classList.remove('hide')
+    }
+    if (name == nameboxShowFood4.innerHTML.trim()) {
+        boxShowFood4.classList.remove('hide')
+    }
+}
+
+//Hàm  ẩn các ô tính tiền
+function checkNameHiddenFood(name) {
+    if (name == nameboxShowFood1.innerHTML.trim()) {
+        boxShowFood1.classList.add('hide')
+    }
+    if (name == nameboxShowFood2.innerHTML.trim()) {
+        boxShowFood2.classList.add('hide')
+    }
+    if (name == nameboxShowFood3.innerHTML.trim()) {
+        boxShowFood3.classList.add('hide')
+    }
+    if (name == nameboxShowFood4.innerHTML.trim()) {
+        boxShowFood4.classList.add('hide')
+    }
+}
+
+//Hàm tính số lượng 
+function checkNameQualityFood(name, value) {
+    if (name == nameboxShowFood1.innerHTML.trim()) {
+        quanityFoodSelected1.innerHTML = value
+    }
+    if (name == nameboxShowFood2.innerHTML.trim()) {
+        quanityFoodSelected2.innerHTML = value
+    }
+    if (name == nameboxShowFood3.innerHTML.trim()) {
+        quanityFoodSelected3.innerHTML = value
+    }
+    if (name == nameboxShowFood4.innerHTML.trim()) {
+        quanityFoodSelected4.innerHTML = value
+    }
+}
+
+function priceFoodElement(name, value, price) {
+    let numberPrice = parseFloat(price.replace(/[^\d]/g, ''));
+    if (name == nameboxShowFood1.innerHTML.trim()) {
+        numberPrice *= value
+        let formattedNumber = numberPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        priceFoodSelected1.innerHTML = formattedNumber
+    }
+    if (name == nameboxShowFood2.innerHTML.trim()) {
+        numberPrice *= value
+        let formattedNumber = numberPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        priceFoodSelected2.innerHTML = formattedNumber
+    }
+    if (name == nameboxShowFood3.innerHTML.trim()) {
+        numberPrice *= value
+        let formattedNumber = numberPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        priceFoodSelected3.innerHTML = formattedNumber
+    }
+    if (name == nameboxShowFood4.innerHTML.trim()) {
+        numberPrice *= value
+        let formattedNumber = numberPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        priceFoodSelected4.innerHTML = formattedNumber
+    }
+}
+
+//Hàm tính tổng giá tiền ghê và thức ăn
+function totalPriceFoodAndChair() {
+    let totalPriceFood = 0;
+
+    // Tính tổng giá trị của thức ăn
+    priceFoodSelected.forEach(price => {
+        let numberPrice = parseFloat(price.innerHTML.trim().replace(/[^\d]/g, ''));
+
+        if (isNaN(numberPrice)) {
+            numberPrice = 0;
+        }
+
+        totalPriceFood += numberPrice;
+    });
+
+    // Tính giá ghế
+    let priceDoubleChair = parseFloat(textPriceDoubleChair.innerText.replace(/[^\d]/g, ''));
+    let priceSingleChair = parseFloat(textPriceSingleChair.innerText.replace(/[^\d]/g, ''));
+
+    // Kiểm tra nếu giá trị không hợp lệ (NaN), gán giá trị mặc định là 0
+    if (isNaN(priceDoubleChair)) {
+        priceDoubleChair = 0;
+    }
+    if (isNaN(priceSingleChair)) {
+        priceSingleChair = 0;
+    }
+
+    let totalPriceChair = priceDoubleChair + priceSingleChair;
+
+    // Tổng giá trị thức ăn và ghế
+    console.log(totalPriceFood);
+    let totalPrice = totalPriceFood + totalPriceChair;
+    let formattedNumber = totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+    textTotalPrice.innerHTML = formattedNumber;
 }

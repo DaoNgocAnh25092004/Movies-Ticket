@@ -615,3 +615,23 @@ function createBackGround() {
     }
 }
 createBackGround()
+
+// -----------------------------------  lưu tên username
+const btnLogOut = document.querySelector('.header__right__user > div');
+const nameUser = document.querySelector('.name__user--login')
+
+const storedUsername = localStorage.getItem('username');
+const checkLogOut = localStorage.getItem('isLoggedIn');
+
+if (checkLogOut === 'true') {
+    nameUser.innerHTML = `Hi, ${storedUsername}`;
+    btnLogOut.classList.remove('hide');
+}
+
+btnLogOut.addEventListener('click', () => {
+    nameUser.innerHTML = '';
+    btnLogOut.classList.add('hide');
+
+    localStorage.setItem('isLoggedIn', 'false');
+});
+

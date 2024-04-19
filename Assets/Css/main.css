@@ -7,6 +7,7 @@
     --blueAqua-color: #1ea6bb;
     --overLay-color: #f8fcfd;
     --grey-color: #000;
+    --color-logout: rgb(4, 52, 73);
 }
 
 body.body--color__change {
@@ -15,7 +16,7 @@ body.body--color__change {
     --bluePurple-color: #fff;
     --grey-color: rgb(105, 104, 104);
     --shadow-color: #fff;
-
+    --color-logout: rgb(0, 195, 255);
 }
 
 * {
@@ -769,6 +770,84 @@ body {
     gap: 4rem;
 }
 
+/* Btn logout user */
+.name__user--login {
+    color: var(--blueAqua-color);
+    width: 15rem;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.btn__logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: var(--color-logout);
+}
+
+.btn__logout--sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__logout--sign svg {
+    width: 17px;
+}
+
+.btn__logout--sign svg path {
+    fill: white;
+}
+
+.btn__logout--text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.btn__logout:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.btn__logout:hover .btn__logout--sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.btn__logout:hover .btn__logout--text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.btn__logout:active {
+    transform: translate(2px, 2px);
+}
+
 /* Search */
 .header__right__search {
     display: flex;
@@ -947,6 +1026,17 @@ body {
 .header__right__user {
     margin-right: -1.2rem;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__right__user div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .header__right__user__form {
@@ -3114,7 +3204,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.container__buy--box2__info--name > div:first-child {
+.container__buy--box2__info--name>div:first-child {
     font-size: 2rem;
     color: var(--blueAqua-color);
     font-weight: bold;
@@ -3731,10 +3821,10 @@ body {
 }
 
 .typewriter .paper {
-   position: absolute;
-   top: -50%;
-   left: 45%;
-   /* transform: translate(-50%,-50%); */
+    position: absolute;
+    top: -50%;
+    left: 45%;
+    /* transform: translate(-50%,-50%); */
     width: 40px;
     height: 46px;
     border-radius: 5px;
@@ -3921,4 +4011,120 @@ body {
     81% {
         box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 12px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
     }
+}
+
+/* Trang mua thức ăn */
+.container__buy--box1__food {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.container__buy--box1__food__img {
+    width: 30%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.container__buy--box1__food__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container__buy--box1__food__content {
+    width: 70%;
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.container__buy--box1__food__content--name {
+    font-size: 2rem;
+}
+
+.container__buy--box1__food__content--note {
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
+
+.container__buy--box1__food__content--price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.7rem;
+}
+
+.container__buy--box1__food__content--price p:last-child {
+    color: var(--blueAqua-color);
+}
+
+.container__buy--box1__food__content--btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.container__buy--box1__food__content--btn p:first-child,
+.container__buy--box1__food__content--btn p:last-child {
+    border: 0.1rem solid var(--blueAqua-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.3s linear;
+}
+
+.container__buy--box1__food__content--btn p:first-child:hover,
+.container__buy--box1__food__content--btn p:last-child:hover {
+    background-color: var(--blueAqua-color);
+}
+
+.container__buy--box1__food__content--btn p:nth-child(2) {
+    border: 0.1rem solid var(--blueAqua-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: var(--blueAqua-color);
+}
+
+.container__buy--box2__info--food {
+    padding: 2rem 0;
+    border-bottom: 0.2rem dotted var(--blueAqua-color);
+    font-size: 1.5rem;
+}
+.container__buy--box2__info--food > div {
+    flex-direction: column;
+    gap: 0 !important;
+    margin: 1rem 0;
+}
+.container__buy--box2__info--food > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-color);
+
+}
+
+.container__buy--box2__info--food > div > div:first-child {
+    justify-content: start;
+
+}
+
+.container__buy--box2__info--food > div > div > p:last-child {
+    color: var(--blueAqua-color);
+    font-weight: bold;
+    margin-top: 1rem;
 }

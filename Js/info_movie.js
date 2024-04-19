@@ -703,7 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     animationNextPage.style.display = 'block'
                                     setTimeout(() => {
                                         animationNextPage.style.display = 'none';
-                                        window.location.href = `cinema__buy${cinema}.html`;
+                                        window.location.href = `cinema_buy${cinema}.html`;
                                     }, 1000);
                                 }
                             }

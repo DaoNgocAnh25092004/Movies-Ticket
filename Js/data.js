@@ -4171,3 +4171,30 @@ var nameCityAndCinema = [
         nameCinema: ['Movies Mipec Long Biên']
     }
 ];
+
+var food = [
+    {   
+        imgFood : '../Assets/Image/Food/Combo 1 Big Extra STD.jpg',
+        nameFood : 'Combo 1 Big Extra STD',
+        noteFood : '1 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack',
+        price : 99000
+    },
+    {
+        imgFood : '../Assets/Image/Food/Combo 1 Big STD.jpg',
+        nameFood : 'Combo 1 Big STD',
+        noteFood : '01 Ly nước ngọt size L + 01 Hộp bắp',
+        price : 79000
+    },
+    {
+        imgFood : '../Assets/Image/Food/Combo 2 Big Extra STD.jpg',
+        nameFood : 'Combo 2 Big Extra STD',
+        noteFood : '02 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack',
+        price : 119000
+    },
+    {
+        imgFood : '../Assets/Image/Food/Combo 1 Big Extra STD.jpg',
+        nameFood : 'Combo 2 Big STD',
+        noteFood : '02 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack',
+        price : 99000
+    },
+]

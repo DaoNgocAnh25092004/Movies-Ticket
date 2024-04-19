@@ -97,9 +97,9 @@
                 </div>
                 <!-- Phần footer -->
                 <p class="my-4">
-                <h3 class="text-center">
+                <h6 class="text-center">
                     Chưa có tài khoản? <a href="../Html/signup.html">Đăng kí</a>
-                </h3>
+                </h6>
                 </p>
                 <p class="mt-4 text-center">
                     <a class="d-block mx-auto" href="../Html/index.html"> &#8701; Quay về trang chủ</a>
@@ -129,7 +129,7 @@
         }
 
         $("#matKhau").keyup(function () {
-            validRePassWord();
+            validPassWord();
         })
 
         function validPassWord() {
@@ -146,8 +146,24 @@
 
 
         $("#btnDangNhap").click(function () {
+            if (!validEmail()) {
+                $("#email").focus();
+            } else if (!validPassWord()) {
+                $("#matKhau").focus();
+            }
+            const storedEmail = localStorage.getItem('email');
+            const storedPassword = localStorage.getItem('password');
+            console.log(storedEmail, storedPassword);
+            if ($("#email").val().trim() === storedEmail && $("#matKhau").val().trim() === storedPassword) {
+                // Chuyển hướng đến trang chủ nếu đăng nhập thành công
+                window.location.href = 'index.html';
+                localStorage.setItem('isLoggedIn', true);
+            } else {
+                // Hiển thị thông báo lỗi nếu đăng nhập thất bại
+                alert('Tên đăng nhập hoặc mật khẩu của bạn không đúng');
+            }
+        });
 
-        })
     })
 </script>
 

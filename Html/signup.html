@@ -57,12 +57,13 @@
         height: 100%;
         object-fit: cover;
     }
+
     @media only screen and (max-width: 740px) {
         .form__background {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
             width: 500px !important;
 
         }
@@ -263,22 +264,37 @@
         }
 
         $("#btnDangki").click(function () {
+            let isValid = true;
             if (!validHoten()) {
                 $("#hoTen").focus();
+                isValid = false;
             } else if (!validEmail()) {
                 $("#email").focus();
+                isValid = false;
             } else if (!validPhone()) {
                 $("#dienThoai").focus();
+                isValid = false;
             } else if (!validGender()) {
                 $("input[name='gioiTinh']").focus();
+                isValid = false;
             } else if (!validNgaySinh()) {
                 $("#ngaySinh").focus();
+                isValid = false;
             } else if (!validPassWord()) {
                 $("#matKhau").focus();
+                isValid = false;
             } else if (!validRePassWord()) {
                 $("#nhapLaimatKhau").focus();
-            } else {
-                alert("Tao thanh cong");
+                isValid = false;
+            }
+
+            if (isValid) {
+                localStorage.setItem('email', $("#email").val().trim());
+                localStorage.setItem('password', $("#matKhau").val().trim());
+                localStorage.setItem('username', $("#hoTen").val().trim());
+                
+                alert('Đăng kí thành công!');
+                window.location.href = 'login.html';
             }
         })
     })
