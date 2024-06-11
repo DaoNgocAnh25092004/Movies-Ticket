@@ -64,6 +64,7 @@ if (listMovieComingSoon) {
                                 </div>
                             </div>`
 
+                            
     });
 
     //Gọi hàm open trailer

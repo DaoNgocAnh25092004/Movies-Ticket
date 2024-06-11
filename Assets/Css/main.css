@@ -28,12 +28,12 @@ body.body--color__change {
 html {
     font-family: "Poppins";
     font-size: 62.5%;
-    cursor: none !important;
+    /* cursor: none !important; */
 
 }
 
 html * {
-    cursor: none !important;
+    /* cursor: none !important; */
 
 }
 
